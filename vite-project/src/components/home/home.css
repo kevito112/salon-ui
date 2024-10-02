@@ -1,6 +1,5 @@
 .home {
     text-align: center;
-    padding: 2rem;
 }
 
 .home h1 {
@@ -15,4 +14,21 @@
 
 .hidden {
     display: none;
+}
+
+.hero {
+    color: white; /* Adjust text color for better readability */''
+    position: relative;
+    margin-top: 200px;
+    margin-bottom: 300px;
+}
+
+.hero-image{
+    position: absolute;
+    object-fit: cover;
+    top: 0px;
+    height: 738px;
+    width: 100%;
+    left: 0px;
+    z-index:-1;
 }

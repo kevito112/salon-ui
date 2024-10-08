@@ -10,9 +10,11 @@ const Home = () => {
                 <Navbar />
                 <section className="hero container">
                     <img src={heroImage} className="hero-image" />
-                    <h1>Enhance Your Beauty.</h1>
-                    <p>Get ready to shine with a little expert TLC!</p>
-                    <button className="book-now-button">Book Now</button>
+                    <div className="hero-content">
+                       <h1>enhance your beauty.</h1>
+                       <p>Get ready to shine with a little expert TLC!</p>
+                       <button className="book-now-button">Book Now</button>
+                    </div>
                 </section>
                 <section className="about container section">
                 <h1>About Section</h1>

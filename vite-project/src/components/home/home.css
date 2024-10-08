@@ -2,33 +2,30 @@
     text-align: center;
 }
 
-.home h1 {
-    font-size: 2.5rem;
-    color: #333;
-}
-
-.home p {
-    font-size: 1.2rem;
-    color: #666;
-}
-
 .hidden {
     display: none;
 }
 
-.hero {
+.hero{
     color: white; /* Adjust text color for better readability */''
     position: relative;
-    margin-top: 200px;
-    margin-bottom: 300px;
+    height: 730px;
+}
+.hero-image{
+    position: relative;
+    object-fit: cover;
+    top: -70px;
+    left: 0;
+    height: 800px;
+    width: 100%;
+    z-index:-1;
 }
 
-.hero-image{
-    position: absolute;
-    object-fit: cover;
-    top: 0px;
-    height: 738px;
-    width: 100%;
-    left: 0px;
-    z-index:-1;
+.hero-content {
+    position: relative;
+    top: -870px; /* Adjust this value as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 200px;
+    z-index: 0; /* Ensure text is above the image */
 }

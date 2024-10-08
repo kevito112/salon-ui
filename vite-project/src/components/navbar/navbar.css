@@ -3,7 +3,6 @@
     position: sticky;
     top: 0px;
     width: 100%;
-    overflow: hidden; /* Ensure the pseudo-element doesn't overflow */
 }
 .navbar{
     width: 75%;
@@ -61,23 +60,64 @@
     border:  none;
 }
 
+.dropdown {
+    position: relative; /* Ensure the dropdown is positioned relative to the navbar */
+}
+
+.dropdown-content .exitting-row {
+   height: 35px; /* Adjust the height as needed */
+}
+
+.exit-img{
+    height: 20px;
+    width: 20px;
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center items vertically */
+    position: relative;
+    margin-left: 89%;
+    margin-right: 11%;
+}
+
 .dropdown-content {
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  position: relative;
-  z-index: 10;
+    position: absolute; /* Position the dropdown content absolutely */
+    top: 0px; /* Position it below the hamburger icon */
+    right: 0; /* Align it to the right */
+    background-color: #DFCBC4;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 10;
 }
 
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
+.dropdown-content span {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29.06px;
+  color:  #7D736F;
   text-decoration: none;
-  display: block;
 }
 
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
+.dropdown-item-wrapper {
+  height: 45px;
+  position: relative; /* Ensure the highlight is relative to each item */
+  display: flex; /* Use flexbox */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+}
+
+.dropdown-item-wrapper:hover::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px; /* Adjust the width of the highlight */
+  background-color: #DB7A58;
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.dropdown-item-wrapper:hover .dropdown-item {
+    color: white; /* Text color on hover */
 }
 
 @media (max-width: 650px) {
@@ -97,11 +137,19 @@
         justify-content: space-between; /* Ensure items are spaced out */
     }
 
+    .exit-img{
+        margin-left: 90%;
+        margin-right: 15px;
+        height: 16px;
+        width: 16px;
+    }
+
     .navbar{
         width: 80%;
         margin: 0 auto;
         margin-bottom:-1px;
     }
+
 }
 
 @media (max-width: 400px) {

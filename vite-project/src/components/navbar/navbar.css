@@ -1,12 +1,16 @@
 .full-width-container {
+    display: flex;
     z-index: 1;
     position: sticky;
+    justify-content: center;
     top: 0px;
     width: 100%;
 }
 .navbar{
+    position: relative;
     width: 75%;
-    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
     margin-bottom:-1px;
 }
 
@@ -32,36 +36,49 @@
 }
 
 .separator {
+    width: 100%;
     height: 1px;
-    border-top: 1.80px solid black;
+    border-top: 1.25px solid black;
     opacity: 1;
-    top: 10%;
-    position: relative;
+    bottom: -2%;
+    position: absolute;
 }
 
 .navbar-logo {
     width: 250px;
     height:60px;
     margin-bottom: 5px;
+    margin-right: 200px;
 }
 .hamburger {
-    margin-right: 10px;
-    width: 30px;
+    display: none; /* Hide by default */
 }
 
-.book-now-button {
-    width: 140px;
-    height: 50px;
-    left: 1110px;
-    top: 36px;
-    background: #EEE7E1;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    border:  none;
+.menu-items{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: 0px;
+    gap: 20vh;
 }
 
-.dropdown {
-    position: relative; /* Ensure the dropdown is positioned relative to the navbar */
+.menu-items a:hover {
+    color: #8c6c24; /* Change text color on hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.menu-items a {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 29.06px;
+    color: black;
+    text-decoration: none;
+}
+
+.book-now-button-navbar {
+    width: 130px !important;
+    height: 40px !important;
 }
 
 .dropdown-content .exitting-row {
@@ -113,11 +130,68 @@
   height: 100%;
   width: 3px; /* Adjust the width of the highlight */
   background-color: #DB7A58;
-  transition: background-color 0.3s; /* Smooth transition */
 }
 
 .dropdown-item-wrapper:hover .dropdown-item {
     color: white; /* Text color on hover */
+}
+
+@media (max-width: 2000px) {
+    .menu-items{
+        gap: 11vh;
+    }
+    .menu-item {
+        font-size: 18px !important;
+    }
+}
+
+@media (max-width: 1400px) {
+    .navbar-logo {
+        width: 190px; /* Smaller logo */
+        height: 50px; /* Adjust height accordingly */
+        margin-bottom: 0px;
+    }
+
+    .menu-items{
+        gap: 7vh;
+    }
+    .menu-item {
+        font-size: 16px !important;
+    }
+}
+@media (max-width: 1160px) {
+    .menu-items{
+        gap: 5vh;
+    }
+}
+
+@media (max-width: 980px) {
+    .navbar-logo {
+        width: 170px; /* Smaller logo */
+        height: 40px; /* Adjust height accordingly */
+        margin-bottom: 0px;
+    }
+    .menu-items{
+        gap: 2vh;
+    }
+    .book-now-button-navbar {
+        font-size: 20px !important;
+        width: 110px !important;
+        height: 30px !important;
+    }
+}
+@media (max-width: 768px) { /* Starts being considered mobile */
+    .menu-items {
+        display: none;
+    }
+    .hamburger {
+        position: absolute;
+        right: 0px; /* Align it to the right */
+        bottom:35%; /* Align it to the top */
+        display: block; /* Show the hamburger icon */
+        margin-right: 1%;
+        width: 20px;
+    }
 }
 
 @media (max-width: 650px) {
@@ -129,8 +203,9 @@
 
     .hamburger {
         width: 20px; /* Smaller hamburger icon */
-        margin-right: 5px; /* Move it towards the end of the page */
-
+    }
+    .hamburger:hover {
+        filter: brightness(0) invert(1); /* This will turn the icon white */
     }
 
     .content {
@@ -161,8 +236,6 @@
 
     .hamburger {
         width: 17px; /* Smaller hamburger icon */
-        margin-right: 5px; /* Move it towards the end of the page */
-
     }
 
     .content {
@@ -185,7 +258,6 @@
 
     .hamburger {
         width: 15px; /* Smaller hamburger icon */
-        margin-right: 5px; /* Move it towards the end of the page */
     }
 
     .content {

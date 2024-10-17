@@ -1,5 +1,6 @@
 import './services.css';
 import Navbar from "../navbar/navbar.tsx";
+import Footer from "../footer/footer.tsx";
 
 const Home = () => {
     return (
@@ -9,6 +10,8 @@ const Home = () => {
                 <h1>Welcome to the Services Component</h1>
                 <p>This is the Services of the application.</p>
             </div>
+            <div style={{height: '70vh'}}></div>
+            <Footer />
         </div>
     );
 };

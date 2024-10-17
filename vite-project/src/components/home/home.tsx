@@ -2,6 +2,7 @@ import './home.css';
 import Navbar from "../navbar/navbar.tsx";
 import Footer from "../footer/footer.tsx";
 import heroImage from '../../assets/images/hero.png';
+import Button from '../../components/button/button';
 
 const Home = () => {
     return (
@@ -13,7 +14,11 @@ const Home = () => {
                     <div className="hero-content">
                        <h1>enhance your beauty.</h1>
                        <p>Get ready to shine with a little expert TLC!</p>
-                       <button className="book-now-button">Book Now</button>
+                        <Button
+                            text="Book Now"
+                            className="book-now-button"
+                            onClick={() => handleWrapperClick('https://www.google.com')}
+                        />
                     </div>
                 </section>
                 <section className="about container section">

@@ -35,7 +35,6 @@ const Navbar = () => {
                         <Button
                             text="Book Now"
                             className="book-now-button-navbar"
-                            onClick={() => handleWrapperClick('https://www.google.com')}
                         />
                     </div>
                     <div className="dropdown">

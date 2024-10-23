@@ -1,0 +1,162 @@
+{
+  "eyelash extensions": {
+    "imgSrc": "src/assets/images/lasheshero.png",
+    "cards": [
+      {
+        "title": "classic set",
+        "description": "The classic set attaches one extension to each natural lash, creating a subtle, elegant enhancement. This method offers a natural, lengthened look ideal for everyday wear and minimalist styles. Refills are recommended every two weeks for $60 to maintain desired lash fullness and length.",
+        "hourPrice": "$85"
+      },
+      {
+        "title": "hybrid set",
+        "description": "The hybrid set blends classic and volume techniques for a fuller, natural-looking lash appearance. By combining individual lashes with fans, it gives texture and a wispy effect. Ideal for those seeking added volume without being too dramatic, refills every two weeks cost $70 to maintain beautiful results.",
+        "hourPrice": "$120"
+      },
+      {
+        "title": "volume set",
+        "description": "The volume set applies multiple lightweight extensions to each natural lash, creating a bold and voluminous effect. This method delivers a glamorous appearance, making it perfect for clients seeking dramatic lashes. Refills every two weeks cost $85, ensuring the stunning volume is always well-maintained and fresh.",
+        "hourPrice": "$140"
+      },
+      {
+        "title": "mega volume set",
+        "description": "Mega volume uses ultra-fine lash extensions to create the most dramatic, fluffy, and dense lash appearance. This technique is ideal for clients desiring maximum volume and an incredibly bold look. Despite the extreme volume, the lashes remain lightweight and comfortable. Refills every two weeks cost $80 for maintenance.",
+        "hourPrice": "$200"
+      },
+      {
+        "title": "lash lifting",
+        "description": "Lash lifting is a semi-permanent treatment designed to curl and lift natural lashes, lasting for 6-8 weeks. It enhances the natural curvature of your lashes, giving your eyes a refreshed look without extensions. This low-maintenance treatment offers great results with minimal upkeep, lasting several weeks before re-treatment.",
+        "hourPrice": "$50"
+      }
+    ]
+  },
+  "eyebrow services": {
+    "imgSrc": "src/assets/images/browshero.png",
+    "cards": [
+      {
+        "title": "eyebrows lamination & tinting",
+        "description": "Eyebrow lamination straightens and sets brow hairs into a sleek, uniform shape. Tinting adds color, enhancing fullness for a polished look. Perfect for clients seeking defined, fuller brows without makeup. The combined treatment typically lasts 4-6 weeks before requiring a touch-up for maintenance.",
+        "hourPrice": "$60"
+      },
+      {
+        "title": "eyebrows tinting",
+        "description": "Eyebrow tinting applies a custom dye to darken brow hairs, adding definition and fullness. It enhances lighter brows, creating a bolder appearance without the need for makeup. This quick treatment is ideal for those wanting subtle enhancement. Tinting typically lasts for 3-4 weeks before fading.",
+        "hourPrice": "$25"
+      },
+      {
+        "title": "eyebrows waxing",
+        "description": "Eyebrow waxing involves applying wax to remove unwanted hair, shaping the brows for a clean, defined look. This method is fast, providing precise results ideal for polished brows. Perfect for those wanting sharp, well-groomed arches. Results last several weeks, with maintenance required as hair regrows.",
+        "hourPrice": "$15"
+      },
+      {
+        "title": "eyebrow tweezing",
+        "description": "Eyebrow tweezing is a precise method using tweezers to shape and remove individual hairs. This technique offers controlled, natural shaping, great for sensitive skin. Tweezing is ideal for clients seeking subtle grooming or detailed brow maintenance. The results last weeks, maintaining the shape between waxing appointments.",
+        "hourPrice": "$25"
+      },
+      {
+        "title": "eyebrows micro-blading",
+        "description": "Micro-blading is a semi-permanent technique that creates fine, hair-like strokes to mimic real brows. Ideal for clients with sparse or thin brows, it provides long-lasting results. The treatment lasts 1-2 years before requiring touch-ups. Micro-blading delivers fuller, defined brows without the need for daily makeup.",
+        "hourPrice": "$299"
+      },
+      {
+        "title": "eyebrows micro-shading",
+        "description": "Eyebrows micro-shading uses a semi-permanent technique to create a soft, powdered look. It provides fuller, gradient-filled brows, great for those preferring a makeup-like finish. This procedure lasts 1-2 years, offering a more natural look than solid microblading. Regular touch-ups keep the appearance fresh and defined.",
+        "hourPrice": "$340"
+      },
+      {
+        "title": "eyebrows powder-browing",
+        "description": "Powder-Browing is a semi-permanent shading technique that offers a soft, powdered finish to the brows. This method gives a more filled-in, defined look without harsh lines. Ideal for clients wanting a natural, long-lasting brow shape. Results last 1-3 years before requiring periodic touch-ups.",
+        "hourPrice": "$350"
+      }
+    ]
+  },
+  "facial treatments": {
+    "imgSrc": "src/assets/images/facialhero.png",
+    "cards": [
+      {
+        "title": "classic facial",
+        "description": "A classic facial deeply cleanses, exfoliates, and hydrates the skin, promoting a healthy glow. It removes impurities, unclogs pores, and restores moisture balance. Ideal for maintaining smooth, refreshed skin. This treatment is suitable for all skin types and provides immediate, visible improvements after each session.",
+        "hourPrice": "$65"
+      },
+      {
+        "title": "hydra-facial",
+        "description": "The Hydra-Facial uses a unique vortex system to cleanse, extract, and hydrate the skin deeply. It targets fine lines, wrinkles, and hyperpigmentation for brighter, rejuvenated skin. This non-invasive treatment is great for all skin types. Immediate, noticeable results are seen, with no downtime required post-treatment.",
+        "hourPrice": "$85"
+      },
+      {
+        "title": "microdermabrasion facial",
+        "description": "Microdermabrasion gently exfoliates the skin using a diamond-tipped device, removing dead skin cells and improving texture. It minimizes fine lines, acne scars, and pigmentation issues. Suitable for those seeking a smoother, more radiant complexion. Results are instant, and repeated treatments enhance long-term skin clarity and radiance.",
+        "hourPrice": "$120"
+      },
+      {
+        "title": "expert derma peels chemical peel",
+        "description": "This chemical peel exfoliates the skin using professional-grade acids to remove damaged outer layers. It treats acne, hyperpigmentation, and signs of aging, revealing smoother, clearer skin underneath. Ideal for those needing deep rejuvenation. The peel results in fresher, more youthful skin, with visible improvements over time.",
+        "hourPrice": "$140"
+      },
+      {
+        "title": "dermaplaning facial",
+        "description": "Dermaplaning involves using a specialized blade to gently exfoliate and remove dead skin cells and fine hair. It leaves skin ultra-smooth, brightened, and ready to absorb skincare products more effectively. Great for all skin types seeking a luminous finish. Results are immediate and last for several weeks.",
+        "hourPrice": "$150"
+      },
+      {
+        "title": "back facial",
+        "description": "The Back Facial deeply cleanses, exfoliates, and moisturizes the skin on your back, effectively targeting impurities. It includes steaming, extraction, a hydrating mask, and a relaxing massage, leaving your skin smooth and refreshed. Ideal for treating back acne or dryness. Results include improved clarity and overall skin health.",
+        "hourPrice": "$100"
+      },
+      {
+        "title": "PRP (plasma rico plaquetas)",
+        "description": "PRP involves using your own platelet-rich plasma to rejuvenate and heal the skin. This treatment boosts collagen production, reduces fine lines, and improves skin texture. Ideal for anti-aging and scar treatment. It provides long-lasting, natural results, enhancing overall skin quality with minimal downtime.",
+        "hourPrice": "$250"
+      },
+      {
+        "title": "baby glow",
+        "description": "The Baby Glow treatment infuses nano-particles of tinted serums into the skin, creating a smooth, glowing complexion. It brightens and evens skin tone, minimizing pores and imperfections. Ideal for a makeup-free, radiant look. The treatment lasts several weeks, delivering a baby-soft finish without heavy coverage.",
+        "hourPrice": "$150"
+      },
+      {
+        "title": "microneedle treatment (biological ampoules)",
+        "description": "Microneedling uses fine needles to create micro-injuries, stimulating collagen production and improving skin texture. Infused with biological ampoules, it targets wrinkles, acne scars, and pigmentation. This treatment promotes smoother, firmer skin over time. Suitable for various skin concerns, with results improving over multiple sessions and long-lasting effects.",
+        "hourPrice": "$140"
+      }
+    ]
+  },
+  "body treatments": {
+    "imgSrc": "src/assets/images/bodyhero2.png",
+    "cards": [
+      {
+        "title": "masaje reductor & linfaticos package",
+        "description": "The Masaje Reductor & Linfaticos package combines slimming and lymphatic massages to reduce body fat and improve circulation. It helps eliminate toxins, reduces swelling, improves skin texture, and contours the body. Available in 5 sessions for $400 or 10 sessions for $700, providing optimal, long-lasting results.",
+        "hourPrice": "$85"
+      }
+    ]
+  },
+  "nail treatments": {
+    "imgSrc": "src/assets/images/nailshero2.png",
+    "cards": [
+      {
+        "title": "classic manicure",
+        "description": "The Classic Manicure includes trimming, shaping, buffing nails, and a soothing hand massage for relaxation. It involves cuticle care and applying your choice of nail polish, ensuring a neat finish. This treatment leaves your nails looking beautiful and healthy. Ideal for regular upkeep to maintain smooth hands.",
+        "hourPrice": "$30"
+      },
+      {
+        "title": "classic pedicure",
+        "description": "The Classic Pedicure starts with a relaxing foot soak, nail trimming, shaping, buffing, and cuticle care. It includes callus removal, a hydrating foot massage, and applying polish. This treatment ensures your feet are soft, refreshed, and well-groomed. Ideal for keeping feet healthy and smooth year-round.",
+        "hourPrice": "$45"
+      },
+      {
+        "title": "gel manicure",
+        "description": "A Gel Manicure includes nail trimming, shaping, buffing, and applying gel polish cured under UV light. It offers a glossy, chip-resistant finish that lasts longer than regular polish. Ideal for clients who want low-maintenance nails. Results typically last up to two weeks, with minimal upkeep needed.",
+        "hourPrice": "$40"
+      },
+      {
+        "title": "gel pedicure",
+        "description": "The Gel Pedicure includes trimming, shaping, buffing nails, cuticle care, and applying gel polish cured under UV light. It provides a durable, shiny finish that is chip-resistant and long-lasting. This treatment also features a relaxing foot massage. Results last several weeks, making it perfect for busy schedules.",
+        "hourPrice": "$55"
+      },
+      {
+        "title": "french manicure or pedicure",
+        "description": "The French Manicure or Pedicure features a classic, elegant look with white tips and a nude base. This treatment includes nail trimming, shaping, buffing, and detailed cuticle care. Perfect for any occasion, it offers a timeless, polished finish. Ideal for those seeking sophisticated, versatile nail styles.",
+        "hourPrice": "$10"
+      }
+    ]
+  }
+}

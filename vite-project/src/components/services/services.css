@@ -1,14 +1,74 @@
+.container2{
+    width: 75%;
+    margin: 0 auto;
+}
+.full-page{
+    background-color: #ebe2db;
+}
 .services {
     text-align: center;
-    padding: 2rem;
 }
 
-.services h1 {
-    font-size: 2.5rem;
-    color: #333;
+.cancellation-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 30px;
+    margin-top: 12px;
+    border-radius: 8px;
 }
 
+.cancellation-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    object-position:  center 70%;
+}
+
+.cancellation-text {
+    padding-top: 12px;
+    text-align: left;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    width: 50%;
+    color: white;
+}
+
+.cancellation-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.cancellation-description {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.cancellation-big-description {
+    font-size: 18px;
+}
+
+.cancellation-text h2{
+    font-family: 'Cinzel', serif !important;
+}
+.cancellation-text p{
+    font-size: 16px;
+    font-family: 'Roboto', serif !important;
+    line-height: 1.8; /* Adjust this value as needed */
+}
 .services  {
-    font-size: 1.2rem;
-    color: #666;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    text-align: left;
+    font-size:22px;
+}
+
+@media (max-width: 900px) {
+}
+@media (max-width: 768px) {
+    .container2 {
+        width: 90%;
+    }
 }

@@ -17,7 +17,6 @@ const Home = () => {
                         <Button
                             text="Book Now"
                             className="book-now-button"
-                            onClick={() => handleWrapperClick('https://www.google.com')}
                         />
                     </div>
                 </section>

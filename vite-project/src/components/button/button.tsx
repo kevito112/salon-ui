@@ -5,12 +5,16 @@ interface ButtonProps {
     text: string;
     style?: React.CSSProperties;
     className?: string;
-    onClick?: () => void;
 }
 
-const Button: React.FC<ButtonProps> = ({ text, style, className, onClick }) => {
+const Button: React.FC<ButtonProps> = ({ text, style, className}) => {
+
+    const handleClick = () => {
+        window.location.href = 'https://www.fresha.com';
+    };
+
     return (
-        <button className={`custom-button ${className}`} style={style} onClick={onClick}>
+        <button className={`custom-button ${className}`} style={style} onClick={handleClick}>
             {text}
         </button>
     );

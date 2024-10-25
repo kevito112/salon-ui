@@ -9,6 +9,8 @@
     font-weight: 700;
     font-size: 22px;
     cursor: pointer;
+    color: black; /* Ensure text color is black */
+    text-decoration: none;
     transition: background-color 0.3s;
 }
 

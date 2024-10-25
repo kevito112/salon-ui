@@ -18,7 +18,9 @@ const Footer = () => {
                                 <h2>contact info</h2>
                                 <div className="footer-item location">
                                      <img src={locationIcon} alt="Location" className="location-icon" />
-                                     <span>961 Crandon Blvd, Key Biscayne, FL 33149</span>
+                                    <a href="geo:25.685220,-80.160910" className="location-link">
+                                        <span>961 Crandon Blvd, Key Biscayne, FL 33149</span>
+                                    </a>
                                 </div>
                                 <div className="footer-item email">
                                      <img src={emailIcon} alt="Email" className="email-icon" />
@@ -26,7 +28,9 @@ const Footer = () => {
                                 </div>
                                 <div className="footer-item phone">
                                      <img src={phoneIcon} alt="Phone" className="phone-icon" />
-                                     <span>305-846-6823</span>
+                                     <a href="tel:305-846-6823" className="phone-num">
+                                        <span>305-846-6823</span>
+                                     </a>
                                 </div>
                             </div>
                     </div>

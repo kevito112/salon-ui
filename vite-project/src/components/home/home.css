@@ -354,5 +354,8 @@
         font-size: 25px !important;
         line-height: 1
     }
+    .hero-image-wrapper::before {
+        background-color: rgba(255, 255, 255, 0.35); /* Adjust the opacity as needed */
+    }
 }
 

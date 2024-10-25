@@ -44,7 +44,12 @@
     position:relative;
     bottom: 3px;
 }
-
+.phone-num{
+    text-decoration: none;
+}
+.location-link{
+    text-decoration: none;
+}
 /* Text / Fonts */
 .stay-in-touch{
    position: relative;

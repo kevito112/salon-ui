@@ -18,9 +18,7 @@ const Home = () => {
             <Navbar />
             <div className="home-full">
                 <section className="hero container">
-                    <div className="hero-image-wrapper">
-                        <img src={heroImage} className="hero-image" />
-                    </div>
+                    <div className="hero-image-wrapper"></div>
                     <div className="hero-content">
                        <h1 className="hero-title">enhance your beauty.</h1>
                        <p className="hero-description">Unlock your inner glow with expert care</p>

@@ -18,9 +18,9 @@ const Footer = () => {
                                 <h2>contact info</h2>
                                 <div className="footer-item location">
                                      <img src={locationIcon} alt="Location" className="location-icon" />
-                                    <a href="geo:25.685221,-80.160912" className="location-link">
-                                        <span>961 Crandon Blvd, Key Biscayne, FL 33149</span>
-                                    </a>
+                                <a href="https://www.google.com/maps/search/?api=1&query=25.685221,-80.160912" className="location-link" target="_blank" rel="noopener noreferrer">
+                                    <span>961 Crandon Blvd, Key Biscayne, FL 33149</span>
+                                </a>
                                 </div>
                                 <div className="footer-item email">
                                      <img src={emailIcon} alt="Email" className="email-icon" />

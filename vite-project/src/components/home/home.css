@@ -2,14 +2,27 @@
     padding: 0;
     margin: 0;
 }
-
+.hero-image-wrapper {
+    background-image: url('../../assets/images/homehero.png');
+    background-size: cover;
+    background-position: center 20%; /* Adjusted background position */
+    height: 800px;
+    width: 140%;
+    position: absolute;
+    top: 46%; /* Adjusted to move the element up */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .hero-image-wrapper::before {
     content: '';
     position: absolute;
-    top: -70px;
     left: 50%;
     width: 140%;
-    height: 800px;
+    height: 100%;
     background-color: rgba(255, 255, 255, 0.25); /* Adjust the opacity as needed */
     z-index: 1;
     transform: translateX(-50%);
@@ -34,17 +47,6 @@
 .container.hero {
     height: 730px;
     position: relative;
-}
-
-.hero-image{
-    position: absolute;
-    object-fit: cover;
-    object-position: center 20%;
-    top: -70px;
-    height: 800px;
-    width: 140%;
-    z-index:-1;
-    transform: translateX(-50%);
 }
 
 .hero-title{
@@ -346,19 +348,29 @@
         max-width: 90%;
     }
     .hero-content{
-        padding-top: 100px !important;
+        padding-top: 75px !important;
     }
     .hero-title{
-        font-size: 40px;
+        font-size: 32px;
         line-height: 1;
     }
     .hero-description{
         margin-top: 20px !important;
-        font-size: 20px !important;
+        font-size: 18px !important;
         line-height: 1
     }
     .hero-image-wrapper::before {
-        background-color: rgba(255, 255, 255, 0.45); /* Adjust the opacity as needed */
+        background-color: rgba(255, 255, 255, 0.35); /* Adjust the opacity as needed */
     }
+    .book-now-button-home{
+        margin-top: 30px;
+        width: 140px !important;
+        height: 40px ! important;
+    }
+
+        .hero-image-wrapper {
+            background-image: url('../../assets/images/homeheroMobile.png');
+            height: 800px; /* Adjust height for mobile if needed */
+        }
 }
 

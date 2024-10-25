@@ -30,7 +30,7 @@
     ]
   },
   "eyebrow services": {
-    "imgSrc": "/images/browshero.png",
+    "imgSrc": "assets/images/browshero.png",
     "cards": [
       {
         "title": "eyebrows lamination & tinting",
@@ -70,7 +70,7 @@
     ]
   },
   "facial treatments": {
-    "imgSrc": "/assets/images/facialhero.png",
+    "imgSrc": "assets/images/facialhero.png",
     "cards": [
       {
         "title": "classic facial",
@@ -180,7 +180,7 @@
     ]
   },
   "body treatments": {
-    "imgSrc": "/bodyhero2.png",
+    "imgSrc": "assets/images/bodyhero2.png",
     "cards": [
       {
         "title": "masaje reductor & linfaticos package",

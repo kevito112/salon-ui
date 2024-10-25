@@ -61,26 +61,38 @@ const Home = () => {
                             />
                     </div>
                 </section>
-                <section className="contact container section">
+                <section className="benefits container section">
                     <h2>reap the benefits</h2>
                     <p>Experience lasting benefits that enhance, refresh, and reveal
                        your natural beauty.</p>
                     <div className="benefit-cards">
                         <div className="benefit-card aesthetics">
                             <img src={aestheticsImg} alt="Aesthetics" className="aesthetics-img benefit-imgs" />
-                            <h3>aesthetics</h3>
+                            <h2>aesthetics</h2>
                             <p>Our treatments enhance your natural beauty, improving the look of your skin, lashes, and nails. You’ll leave with a more polished, radiant appearance that boosts your confidence. Step into everyday looking effortlessly fabulous.</p>
                         </div>
                         <div className="benefit-card relaxation">
                             <img src={relaxationImg} alt="Relaxation" className="relaxation-img benefit-imgs" />
-                            <h3>relaxation</h3>
+                            <h2>relaxation</h2>
                             <p>Indulge in treatments designed to relieve stress and promote relaxation. Feel rejuvenated and refreshed, both physically and mentally. experience tranquility that lingers even long after your visit. </p>
                         </div>
                         <div className="benefit-card individuality">
                             <img src={individualityImg} alt="Individuality" className="individuality-img benefit-imgs" />
-                            <h3>individuality</h3>
+                            <h2>individuality</h2>
                             <p>Each service is personalized to meet your unique beauty goals. Whether it's a custom facial or perfectly shaped brows, we tailor every treatment to suit you. Get results that reflect your individual style and needs.</p>
                         </div>
+                    </div>
+                </section>
+                <section className="location container section">
+                     <h2>visit our location</h2>
+                     <p>961 Crandon Blvd, Key Biscayne, FL 33149</p>
+                    <div className="location-embed">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d764.2906281771718!2d-80.16207488319908!3d25.68586993867576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9ca6a612eeecb%3A0x20b69882aa306359!2s961%20Crandon%20Blvd%2C%20Key%20Biscayne%2C%20FL%2033149!5e1!3m2!1sen!2sus!4v1729877359980!5m2!1sen!2sus"
+                            allowFullScreen={true}
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                        ></iframe>
                     </div>
                 </section>
             </div>

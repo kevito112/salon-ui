@@ -9,6 +9,9 @@ const Gallery = () => {
 
     const [allImagesData, setAllImages] = useState(null);
     const [columns, setColumns] = useState([[], [], []]);
+    const [selectedImage, setSelectedImage] = useState(null);
+    const [currentIndex, setCurrentIndex] = useState(0);
+
     useEffect(() => {
       sanityClient
         .fetch(
@@ -46,6 +49,26 @@ const Gallery = () => {
     }, []);
     const [col1, col2, col3] = columns;
 
+    const openModal = (index) => {
+        setSelectedImage(allImagesData[index].asset.url);
+        setCurrentIndex(index);
+    };
+
+    const closeModal = () => {
+        setSelectedImage(null);
+    };
+
+    const showPrevImage = () => {
+        const newIndex = (currentIndex - 1 + allImagesData.length) % allImagesData.length;
+        setSelectedImage(allImagesData[newIndex].asset.url);
+        setCurrentIndex(newIndex);
+    };
+
+    const showNextImage = () => {
+        const newIndex = (currentIndex + 1) % allImagesData.length;
+        setSelectedImage(allImagesData[newIndex].asset.url);
+        setCurrentIndex(newIndex);
+    };
     return (
         <div className="whole">
             <Navbar />
@@ -53,29 +76,36 @@ const Gallery = () => {
                 <h2 className="title"> GALLERY </h2>
                 <div className="photo-gallery">
                     <div className="column">
-                          {col1.map((image) => (
-                            <div key={image.asset._id} className="photo">
+                          {col1.map((image, index) => (
+                            <div key={image.asset._id} className="photo" onClick={() => openModal(index)}>
                               <img src={image.asset.url} alt="" />
                             </div>
                           ))}
                     </div>
                     <div className="column">
-                          {col2.map((image) => (
-                            <div key={image.asset._id} className="photo">
+                          {col2.map((image, index) => (
+                            <div key={image.asset._id} className="photo" onClick={() => openModal(index)}>
                               <img src={image.asset.url} alt="" />
                             </div>
                           ))}
                     </div>
                     <div className="column">
-                          {col3.map((image) => (
-                            <div key={image.asset._id} className="photo">
+                          {col3.map((image, index) => (
+                            <div key={image.asset._id} className="photo" onClick={() => openModal(index)}>
                               <img src={image.asset.url} alt="" />
                             </div>
                           ))}
                     </div>
                 </div>
-
             </div>
+            {selectedImage && (
+                <div className="modal">
+                    <span className="close" onClick={closeModal}>&times;</span>
+                    <span className="prev" onClick={showPrevImage}>&#10094;</span>
+                    <img className="modal-content" src={selectedImage} alt="" />
+                    <span className="next" onClick={showNextImage}>&#10095;</span>
+                </div>
+            )}
             <Footer />
         </div>
     );

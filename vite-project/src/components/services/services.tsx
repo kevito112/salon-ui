@@ -24,7 +24,7 @@ const Services = () => {
     useEffect(() => {
         setSections(serviceData);
     }, []);
-
+    console.log(sections)
     return (
         <div className="full-page">
             <Navbar/>

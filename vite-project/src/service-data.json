@@ -1,6 +1,6 @@
 {
   "eyelash extensions": {
-    "imgSrc": "src/assets/images/lasheshero.png",
+    "imgSrc": "assets/images/lasheshero.png",
     "cards": [
       {
         "title": "classic set",
@@ -30,7 +30,7 @@
     ]
   },
   "eyebrow services": {
-    "imgSrc": "src/assets/images/browshero.png",
+    "imgSrc": "/images/browshero.png",
     "cards": [
       {
         "title": "eyebrows lamination & tinting",
@@ -70,7 +70,7 @@
     ]
   },
   "facial treatments": {
-    "imgSrc": "src/assets/images/facialhero.png",
+    "imgSrc": "/assets/images/facialhero.png",
     "cards": [
       {
         "title": "classic facial",
@@ -180,7 +180,7 @@
     ]
   },
   "body treatments": {
-    "imgSrc": "src/assets/images/bodyhero2.png",
+    "imgSrc": "/bodyhero2.png",
     "cards": [
       {
         "title": "masaje reductor & linfaticos package",
@@ -190,7 +190,7 @@
     ]
   },
   "nail treatments": {
-    "imgSrc": "src/assets/images/nailshero2.png",
+    "imgSrc": "/assets/images/nailshero2.png",
     "cards": [
       {
         "title": "classic manicure",

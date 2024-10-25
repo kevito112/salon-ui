@@ -1,16 +1,14 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './gallery.css';
 import Navbar from "../navbar/navbar.tsx";
 import Footer from "../footer/footer.tsx";
-import sanityClient from "../../client";
+import sanityClient from "../../client.js";
+import imageUrlBuilder from '@sanity/image-url'
 
 const Gallery = () => {
 
-  /*   const [allImagesData, setAllImages] = useState<{ asset: { _id: string; url: string } }[] | null>(null); */
-    const [columns, setColumns] = useState<{ asset: { _id: string; url: string } }[][]>([[], [], []]);
-/*     const [selectedImage, setSelectedImage] = useState<string | null>(null);
-    const [currentIndex, setCurrentIndex] = useState(0); */
-
+    const [allImagesData, setAllImages] = useState(null);
+    const [columns, setColumns] = useState([[], [], []]);
     useEffect(() => {
       sanityClient
         .fetch(
@@ -23,14 +21,14 @@ const Gallery = () => {
              }
            }`
         )
-     .then((data: { images: { asset: { _id: string; url: string } }[] }[]) => {
+     .then((data) => {
             if (data.length > 0) {
               const images = data[0].images.reverse();
-              /* setAllImages(images);
- */
-              const col1: { asset: { _id: string; url: string } }[] = [];
-              const col2: { asset: { _id: string; url: string } }[] = [];
-              const col3: { asset: { _id: string; url: string } }[] = [];
+              setAllImages(images);
+
+              const col1 = [];
+              const col2 = [];
+              const col3 = [];
 
               images.forEach((image, index) => {
                 if (index % 3 === 0) {
@@ -48,34 +46,6 @@ const Gallery = () => {
     }, []);
     const [col1, col2, col3] = columns;
 
-   /*  const openModal = (index: number) => {
-        if (allImagesData) {
-            console.log(index);
-            setSelectedImage(allImagesData[index].asset.url);
-            setCurrentIndex(index);
-        }
-    };
-
-    const closeModal = () => {
-        setSelectedImage(null);
-    };
-
-    const showPrevImage = () => {
-        if (allImagesData) {
-            const newIndex = (currentIndex - 1 + allImagesData.length) % allImagesData.length;
-            console.log("we are now at the previous index: " + newIndex)
-            setSelectedImage(allImagesData[newIndex].asset.url);
-            setCurrentIndex(newIndex);
-        }
-    };
-    const showNextImage = () => {
-        if (allImagesData) {
-            const newIndex = (currentIndex + 1) % allImagesData.length;
-            console.log("we are now at the next index: " + newIndex)
-            setSelectedImage(allImagesData[newIndex].asset.url);
-            setCurrentIndex(newIndex);
-        }
-    }; */
     return (
         <div className="whole">
             <Navbar />
@@ -104,6 +74,7 @@ const Gallery = () => {
                           ))}
                     </div>
                 </div>
+
             </div>
             <Footer />
         </div>

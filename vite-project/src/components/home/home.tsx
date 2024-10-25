@@ -12,7 +12,6 @@ import aestheticsImg from '../../assets/images/aesthetics.png';
 import relaxationImg from '../../assets/images/relaxation.png';
 import individualityImg from '../../assets/images/individuality.png';
 
-import { Link } from 'react-router-dom';
 const Home = () => {
     return (
         <div>

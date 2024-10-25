@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './dropdown.css';
 import Button from '../button/button';
-import CardData from '../../services/services.tsx';
+import type { CardData } from '../services/services';
 
 interface DropdownProps {
     generalServiceName: string;
@@ -18,10 +18,6 @@ const Dropdown: React.FC<DropdownProps> = ({ imgSrc, cards, generalServiceName }
         setIsClicked(!isClicked);
     };
 
-    const closeDropdown = () => {
-        setIsDropdownOpen(false);
-    };
-
   return (
     <div className="dropdown">
         <div className={`initial-dropdown ${isClicked ? 'clicked' : ''}`} onClick={toggleDropdown}>
@@ -33,7 +29,7 @@ const Dropdown: React.FC<DropdownProps> = ({ imgSrc, cards, generalServiceName }
         </div>
                 <div className={`full-dropdown ${isDropdownOpen ? 'open' : ''}`}>
                    <div className="dropdown-image">
-                        <img src={imgSrc} className="img-src" Alt ="Service Image" />
+                        <img src={imgSrc} className="img-src" alt ="Service Image" />
                    </div>
                    <div className="dropdown-menu">
                     {cards.map((card, index) => (

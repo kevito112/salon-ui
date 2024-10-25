@@ -1,4 +1,3 @@
-import React from 'react';
 import './footer.css';
 import locationIcon from '../../assets/images/location.png';
 import phoneIcon from '../../assets/images/phone.png';

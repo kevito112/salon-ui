@@ -1,15 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './gallery.css';
 import Navbar from "../navbar/navbar.tsx";
 import Footer from "../footer/footer.tsx";
-import sanityClient from "../../client.js";
-import imageUrlBuilder from '@sanity/image-url'
+import sanityClient from "../../client";
 
 const Gallery = () => {
 
-    const [allImagesData, setAllImages] = useState(null);
-    const [columns, setColumns] = useState([[], [], []]);
-    const [selectedImage, setSelectedImage] = useState(null);
+    const [allImagesData, setAllImages] = useState<{ asset: { _id: string; url: string } }[] | null>(null);
+    const [columns, setColumns] = useState<{ asset: { _id: string; url: string } }[][]>([[], [], []]);
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
@@ -24,14 +23,14 @@ const Gallery = () => {
              }
            }`
         )
-     .then((data) => {
+     .then((data: { images: { asset: { _id: string; url: string } }[] }[]) => {
             if (data.length > 0) {
               const images = data[0].images.reverse();
               setAllImages(images);
 
-              const col1 = [];
-              const col2 = [];
-              const col3 = [];
+              const col1: { asset: { _id: string; url: string } }[] = [];
+              const col2: { asset: { _id: string; url: string } }[] = [];
+              const col3: { asset: { _id: string; url: string } }[] = [];
 
               images.forEach((image, index) => {
                 if (index % 3 === 0) {
@@ -49,9 +48,11 @@ const Gallery = () => {
     }, []);
     const [col1, col2, col3] = columns;
 
-    const openModal = (index) => {
-        setSelectedImage(allImagesData[index].asset.url);
-        setCurrentIndex(index);
+    const openModal = (index: number) => {
+        if (allImagesData) {
+            setSelectedImage(allImagesData[index].asset.url);
+            setCurrentIndex(index);
+        }
     };
 
     const closeModal = () => {
@@ -59,15 +60,18 @@ const Gallery = () => {
     };
 
     const showPrevImage = () => {
-        const newIndex = (currentIndex - 1 + allImagesData.length) % allImagesData.length;
-        setSelectedImage(allImagesData[newIndex].asset.url);
-        setCurrentIndex(newIndex);
+        if (allImagesData) {
+            const newIndex = (currentIndex - 1 + allImagesData.length) % allImagesData.length;
+            setSelectedImage(allImagesData[newIndex].asset.url);
+            setCurrentIndex(newIndex);
+        }
     };
-
     const showNextImage = () => {
-        const newIndex = (currentIndex + 1) % allImagesData.length;
-        setSelectedImage(allImagesData[newIndex].asset.url);
-        setCurrentIndex(newIndex);
+        if (allImagesData) {
+            const newIndex = (currentIndex + 1) % allImagesData.length;
+            setSelectedImage(allImagesData[newIndex].asset.url);
+            setCurrentIndex(newIndex);
+        }
     };
     return (
         <div className="whole">

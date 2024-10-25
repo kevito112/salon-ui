@@ -1,5 +1,5 @@
 import './navbar.css';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import keybeauty from '../../assets/images/keybeauty.png';
 import hamburgerIcon from '../../assets/images/hamburger.png'; // Import the hamburger icon
 import exit from '../../assets/images/exit.png';

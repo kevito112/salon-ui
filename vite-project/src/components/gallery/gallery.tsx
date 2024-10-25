@@ -84,21 +84,21 @@ const Gallery = () => {
                 <div className="photo-gallery">
                     <div className="column">
                           {col1.map((image, index) => (
-                            <div key={image.asset._id} className="photo" onClick={() => openModal(index)}>
+                            <div key={image.asset._id} className="photo">
                               <img src={image.asset.url} alt="" />
                             </div>
                           ))}
                     </div>
                     <div className="column">
                           {col2.map((image, index) => (
-                            <div key={image.asset._id} className="photo" onClick={() => openModal(index)}>
+                            <div key={image.asset._id} className="photo">
                               <img src={image.asset.url} alt="" />
                             </div>
                           ))}
                     </div>
                     <div className="column">
                           {col3.map((image, index) => (
-                            <div key={image.asset._id} className="photo" onClick={() => openModal(index)}>
+                            <div key={image.asset._id} className="photo">
                               <img src={image.asset.url} alt="" />
                             </div>
                           ))}

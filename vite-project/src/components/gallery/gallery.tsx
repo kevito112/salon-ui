@@ -6,10 +6,10 @@ import sanityClient from "../../client";
 
 const Gallery = () => {
 
-    const [allImagesData, setAllImages] = useState<{ asset: { _id: string; url: string } }[] | null>(null);
+  /*   const [allImagesData, setAllImages] = useState<{ asset: { _id: string; url: string } }[] | null>(null); */
     const [columns, setColumns] = useState<{ asset: { _id: string; url: string } }[][]>([[], [], []]);
-    const [selectedImage, setSelectedImage] = useState<string | null>(null);
-    const [currentIndex, setCurrentIndex] = useState(0);
+/*     const [selectedImage, setSelectedImage] = useState<string | null>(null);
+    const [currentIndex, setCurrentIndex] = useState(0); */
 
     useEffect(() => {
       sanityClient
@@ -26,8 +26,8 @@ const Gallery = () => {
      .then((data: { images: { asset: { _id: string; url: string } }[] }[]) => {
             if (data.length > 0) {
               const images = data[0].images.reverse();
-              setAllImages(images);
-
+              /* setAllImages(images);
+ */
               const col1: { asset: { _id: string; url: string } }[] = [];
               const col2: { asset: { _id: string; url: string } }[] = [];
               const col3: { asset: { _id: string; url: string } }[] = [];
@@ -48,7 +48,7 @@ const Gallery = () => {
     }, []);
     const [col1, col2, col3] = columns;
 
-    const openModal = (index: number) => {
+   /*  const openModal = (index: number) => {
         if (allImagesData) {
             console.log(index);
             setSelectedImage(allImagesData[index].asset.url);
@@ -75,7 +75,7 @@ const Gallery = () => {
             setSelectedImage(allImagesData[newIndex].asset.url);
             setCurrentIndex(newIndex);
         }
-    };
+    }; */
     return (
         <div className="whole">
             <Navbar />
@@ -83,21 +83,21 @@ const Gallery = () => {
                 <h2 className="title"> GALLERY </h2>
                 <div className="photo-gallery">
                     <div className="column">
-                          {col1.map((image, index) => (
+                          {col1.map((image) => (
                             <div key={image.asset._id} className="photo">
                               <img src={image.asset.url} alt="" />
                             </div>
                           ))}
                     </div>
                     <div className="column">
-                          {col2.map((image, index) => (
+                          {col2.map((image) => (
                             <div key={image.asset._id} className="photo">
                               <img src={image.asset.url} alt="" />
                             </div>
                           ))}
                     </div>
                     <div className="column">
-                          {col3.map((image, index) => (
+                          {col3.map((image) => (
                             <div key={image.asset._id} className="photo">
                               <img src={image.asset.url} alt="" />
                             </div>
@@ -105,14 +105,6 @@ const Gallery = () => {
                     </div>
                 </div>
             </div>
-            {selectedImage && (
-                <div className="modal">
-                    <span className="close" onClick={closeModal}>&times;</span>
-                    <span className="prev" onClick={showPrevImage}>&#10094;</span>
-                    <img className="modal-content" src={selectedImage} alt="" />
-                    <span className="next" onClick={showNextImage}>&#10095;</span>
-                </div>
-            )}
             <Footer />
         </div>
     );

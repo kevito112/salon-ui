@@ -18,13 +18,15 @@ const Footer = () => {
                                 <h2>contact info</h2>
                                 <div className="footer-item location">
                                      <img src={locationIcon} alt="Location" className="location-icon" />
-                                    <a href="geo:25.685220,-80.160910" className="location-link">
+                                    <a href="geo:25.685221,-80.160912" className="location-link">
                                         <span>961 Crandon Blvd, Key Biscayne, FL 33149</span>
                                     </a>
                                 </div>
                                 <div className="footer-item email">
                                      <img src={emailIcon} alt="Email" className="email-icon" />
-                                     <span>lashesaffair@gmail.com</span>
+                                    <a href="mailto:lashesaffair@gmail.com" className="email-link">
+                                        <span>lashesaffair@gmail.com</span>
+                                    </a>
                                 </div>
                                 <div className="footer-item phone">
                                      <img src={phoneIcon} alt="Phone" className="phone-icon" />

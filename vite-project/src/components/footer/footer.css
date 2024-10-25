@@ -50,6 +50,9 @@
 .location-link{
     text-decoration: none;
 }
+.email-link{
+    text-decoration: none;
+}
 /* Text / Fonts */
 .stay-in-touch{
    position: relative;

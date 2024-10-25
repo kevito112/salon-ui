@@ -50,6 +50,7 @@ const Gallery = () => {
 
     const openModal = (index: number) => {
         if (allImagesData) {
+            console.log(index);
             setSelectedImage(allImagesData[index].asset.url);
             setCurrentIndex(index);
         }
@@ -62,6 +63,7 @@ const Gallery = () => {
     const showPrevImage = () => {
         if (allImagesData) {
             const newIndex = (currentIndex - 1 + allImagesData.length) % allImagesData.length;
+            console.log("we are now at the previous index: " + newIndex)
             setSelectedImage(allImagesData[newIndex].asset.url);
             setCurrentIndex(newIndex);
         }
@@ -69,6 +71,7 @@ const Gallery = () => {
     const showNextImage = () => {
         if (allImagesData) {
             const newIndex = (currentIndex + 1) % allImagesData.length;
+            console.log("we are now at the next index: " + newIndex)
             setSelectedImage(allImagesData[newIndex].asset.url);
             setCurrentIndex(newIndex);
         }

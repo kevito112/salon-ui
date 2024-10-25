@@ -4,6 +4,7 @@ import Navbar from "../navbar/navbar.tsx";
 import Footer from "../footer/footer.tsx";
 import Dropdown from "../dropdown/dropdown.tsx";
 import cancellationImage from '../../assets/images/cancellation2.png';
+import serviceData from '../../service-data.json';
 
 export interface CardData {
     title: string;
@@ -22,13 +23,9 @@ const Services = () => {
     const [sections, setSections] = useState<{ [key: string]: SectionData }>({});
 
     useEffect(() => {
-        fetch('src/service-data.json')
-            .then(response => response.json())
-            .then(data => setSections(data))
-            .catch(error => console.error('Error fetching service data:', error));
+        setSections(serviceData);
     }, []);
 
-    console.log(sections);
     return (
         <div className="full-page">
             <Navbar/>

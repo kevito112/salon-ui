@@ -1,7 +1,6 @@
 import './home.css';
 import Navbar from "../navbar/navbar.tsx";
 import Footer from "../footer/footer.tsx";
-import heroImage from '../../assets/images/homehero.png';
 import Button from '../../components/button/button';
 import ownerImg from '../../assets/images/process.png';
 import topleft from '../../assets/images/topleft-collage.png';

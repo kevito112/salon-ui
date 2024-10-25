@@ -1,22 +1,3 @@
 {
-  "builds": [
-    {
-      "src": "vite-project/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/[^.]+",
-      "dest": "/",
-      "status": 200
-    },
-    {
-      "src": "/service-data.json",
-      "dest": "/src/service-data.json"
-    }
-  ]
+  "routes": [{ "src": "/[^.]+", "dest": "/", "status": 200 }]
 }

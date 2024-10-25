@@ -9,7 +9,6 @@ import serviceData from '../../service-data.json';
 export interface CardData {
     title: string;
     description: string;
-    price: string;
     hourPrice: string;
     subsection? : string;
 }

@@ -23,7 +23,7 @@ const Home = () => {
                     </div>
                     <div className="hero-content">
                        <h1 className="hero-title">enhance your beauty.</h1>
-                       <p className="hero-description">Get ready to shine with a little expert TLC!</p>
+                       <p className="hero-description">Unlock your inner glow with expert care</p>
                         <Button
                             text="Book Now"
                             className="book-now-button-home"

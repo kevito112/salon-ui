@@ -5,11 +5,12 @@ import Footer from "../footer/footer.tsx";
 import Dropdown from "../dropdown/dropdown.tsx";
 import cancellationImage from '../../assets/images/cancellation2.png';
 
-interface CardData {
+export interface CardData {
     title: string;
     description: string;
     price: string;
     hourPrice: string;
+    subsection? : string;
 }
 
 interface SectionData {
@@ -26,6 +27,8 @@ const Services = () => {
             .then(data => setSections(data))
             .catch(error => console.error('Error fetching service data:', error));
     }, []);
+
+    console.log(sections);
     return (
         <div className="full-page">
             <Navbar/>
@@ -51,7 +54,7 @@ const Services = () => {
                         </p>
                     </div>
                 </div>
-                <div style={{height: '22vh'}}></div>
+                <div className="filler-space" ></div>
             </div>
             <Footer />
         </div>

@@ -31,6 +31,10 @@
     margin-bottom: 35px; /* Adjust the value as needed */
 }
 
+.socials{
+    position: relative;
+    bottom: 7px;
+}
 .social-icons {
     position:relative;
     bottom: 3px;
@@ -42,7 +46,10 @@
 }
 
 /* Text / Fonts */
-
+.stay-in-touch{
+   position: relative;
+    bottom: -4px;
+}
 .hours span {
     display: block;
     margin-bottom: -12px; /* Adjust the value as needed */
@@ -126,17 +133,26 @@
     top: 0px;
 }
 .instagram-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 3px;
+    width: 22px;
+    height: 22px;
+    filter: brightness(0)
 }
 
 .yelp-icon {
     position:relative;
-    bottom: 2px;
+    bottom: 1.5px;
+    width: 18px;
+    height: 18px;
+    margin-left: 4px;
+    filter: brightness(0);
+}
+
+.whatsapp-icon {
+    position:relative;
+    bottom: 1px;
     width: 20px;
     height: 20px;
-    margin-right: 10px;
+    margin-left: 5px;
 }
 
 .footer-item.location span {

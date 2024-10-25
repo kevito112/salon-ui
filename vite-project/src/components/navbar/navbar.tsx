@@ -25,9 +25,13 @@ const Navbar = () => {
         <div className="full-width-container">
             <nav className="navbar container">
                 <div className="content">
-                    <a href="/home" className="home-link">
-                        <img src={keybeauty} alt="Key Beauty Logo" className="navbar-logo" />
-                    </a>
+                    <img
+                        src={keybeauty}
+                        alt="Key Beauty Logo"
+                        className="navbar-logo"
+                        onClick={() => window.location.href = '/home'}
+                        style={{ cursor: 'pointer' }}
+                    />
                     <div className="menu-items">
                         <a href="/home" className="menu-item">HOME</a>
                         <a href="/services" className="menu-item">SERVICES</a>
@@ -52,7 +56,7 @@ const Navbar = () => {
                                 <div className="dropdown-item-wrapper exitting-row" onClick={closeDropdown} style={{ cursor: 'pointer' }}>
                                     <img src={exit} className="exit-img" alt="Exit" />
                                 </div>
-                                <div className="dropdown-item-wrapper" onClick={() => handleWrapperClick('/book-now')} style={{ cursor: 'pointer' }}>
+                                <div className="dropdown-item-wrapper" onClick={() => handleWrapperClick('https://www.fresha.com')} style={{ cursor: 'pointer' }}>
                                     <span className="dropdown-item">Book Now</span>
                                 </div>
                                 <div className="dropdown-item-wrapper" onClick={() => handleWrapperClick('/services')} style={{ cursor: 'pointer' }}>

@@ -1,6 +1,6 @@
 .full-width-container {
     display: flex;
-    z-index: 1;
+    z-index: 9;
     position: sticky;
     justify-content: center;
     top: 0px;
@@ -40,7 +40,7 @@
     height: 1px;
     border-top: 1.25px solid black;
     opacity: 1;
-    bottom: -2%;
+    bottom: -1%;
     position: absolute;
 }
 
@@ -147,9 +147,9 @@
 
 @media (max-width: 1400px) {
     .navbar-logo {
-        width: 190px; /* Smaller logo */
+        width: 200px; /* Smaller logo */
         height: 50px; /* Adjust height accordingly */
-        margin-bottom: 0px;
+        margin-bottom: 5px;
     }
 
     .menu-items{
@@ -167,9 +167,9 @@
 
 @media (max-width: 980px) {
     .navbar-logo {
-        width: 170px; /* Smaller logo */
+        width: 160px; /* Smaller logo */
         height: 40px; /* Adjust height accordingly */
-        margin-bottom: 0px;
+        margin-bottom: 5px;
     }
     .menu-items{
         gap: 2vh;
@@ -198,7 +198,7 @@
     .navbar-logo {
         width: 170px; /* Smaller logo */
         height: 40px; /* Adjust height accordingly */
-        margin-bottom: 0px;
+        margin-bottom: 5px;
     }
 
     .hamburger {
@@ -231,7 +231,7 @@
     .navbar-logo {
         width: 150px; /* Smaller logo */
         height: 35px; /* Adjust height accordingly */
-        margin-bottom: 0px;
+        margin-bottom: 5px;
     }
 
     .hamburger {
@@ -253,7 +253,7 @@
     .navbar-logo {
         width: 110px; /* Smaller logo */
         height: 27px; /* Adjust height accordingly */
-        margin-bottom: 0px;
+        margin-bottom: 5px;
     }
 
     .hamburger {

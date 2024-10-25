@@ -5,6 +5,7 @@ import phoneIcon from '../../assets/images/phone.png';
 import yelpIcon from '../../assets/images/yelp.png';
 import emailIcon from '../../assets/images/email.png';
 import instagramIcon from '../../assets/images/instagram.png';
+import whatsappIcon from '../../assets/images/whatsapp.png';
 import keybeauty from '../../assets/images/keybeauty.png';
 const Footer = () => {
     return (
@@ -38,12 +39,15 @@ const Footer = () => {
                            <span>Sat - Sun: Appointment Only w/ Deposit</span>
                        </div>
                        <div className="socials">
-                            <h2>stay in touch</h2>
+                            <h2 className="stay-in-touch">stay in touch</h2>
                             <span className="span-text">Follow me on social media for updates.</span>
                             <br></br>
                             <div className="social-icons">
                                 <a href="https://www.instagram.com/keybeautybyyeny/" target="_blank" rel="noopener noreferrer" className="social-link instagram-link">
                                     <img src={instagramIcon} alt="Instagram" className="instagram-icon" />
+                                </a>
+                                <a href="https://wa.link/0nsw8k" target="_blank" rel="noopener noreferrer" className="social-link whatsapp-link">
+                                    <img src={whatsappIcon} alt="Whatsapp" className="whatsapp-icon" />
                                 </a>
                                 <a href="https://www.yelp.com/biz/key-beauty-by-yenys-miami" target="_blank" rel="noopener noreferrer" className="social-link yelp-link">
                                     <img src={yelpIcon} alt="Yelp" className="yelp-icon" />

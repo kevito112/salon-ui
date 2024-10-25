@@ -1,12 +1,7 @@
 import React, { useState } from 'react';
 import './dropdown.css';
 import Button from '../button/button';
-
-interface CardData {
-    title: string;
-    description: string;
-    hourPrice: string;
-}
+import CardData from '../../services/services.tsx';
 
 interface DropdownProps {
     generalServiceName: string;

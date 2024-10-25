@@ -37,7 +37,7 @@
 }
 
 .cancellation-title {
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 10px;
 }
 
@@ -56,6 +56,7 @@
 .cancellation-text p{
     font-size: 16px;
     font-family: 'Roboto', serif !important;
+    font-weight: 300;
     line-height: 1.8; /* Adjust this value as needed */
 }
 .services  {
@@ -64,11 +65,28 @@
     text-align: left;
     font-size:22px;
 }
+.filler-space{
+    height: 23vh;
+}
 
-@media (max-width: 900px) {
+@media (max-height: 1050px) {
+    .filler-space{
+        height: 0px;
+    }
 }
 @media (max-width: 768px) {
     .container2 {
         width: 90%;
+    }
+}
+
+@media (max-width: 652px) {
+    .cancellation-container{
+        padding-top: 8px;
+    }
+    .cancellation-text p{
+        width: 135%;
+        font-size: 14px;
+        line-height: 1.6; /* Adjust this value as needed */
     }
 }

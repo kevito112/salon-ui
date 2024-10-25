@@ -116,6 +116,66 @@
         "title": "microneedle treatment (biological ampoules)",
         "description": "Microneedling uses fine needles to create micro-injuries, stimulating collagen production and improving skin texture. Infused with biological ampoules, it targets wrinkles, acne scars, and pigmentation. This treatment promotes smoother, firmer skin over time. Suitable for various skin concerns, with results improving over multiple sessions and long-lasting effects.",
         "hourPrice": "$140"
+      },
+      {
+        "title": "purifying (deep cleansing treatment)",
+        "description": "The Purifying treatment deeply cleanses, exfoliates, and purifies the skin, removing impurities and excess oil. It unclogs pores, refines texture, and leaves the skin refreshed. Perfect for those with oily or acne-prone skin. Results include clearer, healthier-looking skin with minimized breakouts and improved complexion.",
+        "hourPrice": "$120",
+        "subsection": "Essential Care"
+      },
+      {
+        "title": "goji (premature - aging)",
+        "description": "The Goji treatment combats premature aging using antioxidant-rich goji berry extracts to protect and revitalize skin. It hydrates, firms, and reduces the appearance of fine lines and wrinkles. Ideal for clients looking to delay early signs of aging. The result is firmer, rejuvenated, and glowing skin.",
+        "hourPrice": "$120",
+        "subsection": "Essential Care"
+      },
+      {
+        "title": "age defense (global anti-aging, sensitive skin)",
+        "description": "Age Defense is an anti-aging treatment designed for sensitive skin, addressing wrinkles, firmness, and elasticity. It deeply nourishes and protects the skin from environmental damage. Ideal for those looking to prevent and reduce signs of aging. Leaves skin feeling calm, smooth, and visibly younger over time.",
+        "hourPrice": "$140",
+        "subsection": "Anti-Aging Natural"
+      },
+      {
+        "title": "ocean miracle (firming – anti-aging)",
+        "description": "The Ocean Miracle treatment firms and lifts skin, providing a powerful anti-aging effect using marine-based ingredients. It deeply hydrates and restores elasticity, improving skin’s overall texture and tone. Perfect for clients seeking a rejuvenated, youthful appearance. Immediate results include visibly firmer, smoother skin with long-lasting hydration.",
+        "hourPrice": "$140",
+        "subsection": "Anti-Aging Natural"
+      },
+      {
+        "title": "shine stop (sebum regulator)",
+        "description": "Shine Stop regulates excess oil production, providing a matte, balanced complexion for oily skin types. It refines pores and controls shine without over-drying. Ideal for those struggling with oily or combination skin. The result is long-lasting oil control, a smoother texture, and fewer breakouts.",
+        "hourPrice": "$120",
+        "subsection": "Specific Care"
+      },
+      {
+        "title": "advanced NAcar (anti-aging depigmenting – hyper pigment)",
+        "description": "Advanced NAcar targets signs of aging and hyperpigmentation, reducing dark spots and uneven skin tone. It combines anti-aging properties with depigmenting effects for a clearer, more youthful complexion. Great for clients dealing with pigmentation issues. The treatment leaves skin brighter, smoother, and visibly more even-toned.",
+        "hourPrice": "$150",
+        "subsection": "Specific Care"
+      },
+      {
+        "title": "skin sensation (revitalizing – vitamins)",
+        "description": "Skin Sensation revitalizes dull, tired skin with a powerful blend of vitamins and antioxidants. It energizes the skin, improving elasticity and radiance. Perfect for those seeking a healthy glow and nourishment. The treatment leaves skin soft, radiant, and refreshed, boosting overall skin vitality and appearance.",
+        "hourPrice": "$140",
+        "subsection": "Anti-Aging"
+      },
+      {
+        "title": "rgnerin (cell renewer botox effect)",
+        "description": "Rgnerin renews skin cells while providing a Botox-like effect, smoothing fine lines and wrinkles. This treatment boosts collagen production for firmer, rejuvenated skin. Ideal for clients seeking a non-invasive anti-aging solution. The result is a youthful, refreshed appearance with visibly reduced signs of aging.",
+        "hourPrice": "$140",
+        "subsection": "Anti-Aging"
+      },
+      {
+        "title": "infinity (youth activator – anti-aging)",
+        "description": "Infinity is an advanced anti-aging treatment that activates youthfulness by boosting cell regeneration and collagen production. It reduces wrinkles, firms skin, and restores elasticity. Perfect for clients wanting to slow the aging process. Leaves skin looking radiant, firmer, and rejuvenated with visible long-lasting results.",
+        "hourPrice": "$150",
+        "subsection": "Global Anti-Aging"
+      },
+      {
+        "title": "Q10 rescue (anti-aging extra nourishing)",
+        "description": "Q10 Rescue deeply nourishes and repairs the skin, using coenzyme Q10 to combat aging. It improves skin elasticity and moisture retention, reducing the appearance of fine lines and wrinkles. Ideal for dry, aging skin needing intense hydration. Results include softer, plumper, and more youthful-looking skin.",
+        "hourPrice": "$150",
+        "subsection": "Global Anti-Aging"
       }
     ]
   },

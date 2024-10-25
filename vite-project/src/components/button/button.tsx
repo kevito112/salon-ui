@@ -5,12 +5,13 @@ interface ButtonProps {
     text: string;
     style?: React.CSSProperties;
     className?: string;
+    url?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ text, style, className}) => {
+const Button: React.FC<ButtonProps> = ({ text, style, className, url = 'https://www.fresha.com' }) => {
 
     const handleClick = () => {
-        window.location.href = 'https://www.fresha.com';
+        window.location.href = url;
     };
 
     return (

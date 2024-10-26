@@ -99,7 +99,7 @@
     position: absolute; /* Position the dropdown content absolutely */
     top: 20px; /* Position it below the hamburger icon */
     right: 0; /* Align it to the right */
-    background-color: #f9d2d7;
+    background-color: #fbe1e5;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 10;

@@ -40,7 +40,7 @@
     height: 1px;
     border-top: 1.25px solid black;
     opacity: 1;
-    bottom: -1%;
+    bottom: -2px;
     position: absolute;
 }
 
@@ -91,18 +91,19 @@
     display: flex; /* Use flexbox */
     align-items: center; /* Center items vertically */
     position: relative;
-    margin-left: 89%;
-    margin-right: 11%;
+    margin-left: 85%;
+    margin-right: 15%;
 }
 
 .dropdown-content {
     position: absolute; /* Position the dropdown content absolutely */
-    top: 0px; /* Position it below the hamburger icon */
+    top: 20px; /* Position it below the hamburger icon */
     right: 0; /* Align it to the right */
-    background-color: #DFCBC4;
+    background-color: #f9d2d7;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 10;
+    border-radius: 20px;
 }
 
 .dropdown-content span {
@@ -122,15 +123,6 @@
   justify-content: center; /* Center items horizontally */
 }
 
-.dropdown-item-wrapper:hover::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 3px; /* Adjust the width of the highlight */
-  background-color: #DB7A58;
-}
 
 .dropdown-item-wrapper:hover .dropdown-item {
     color: white; /* Text color on hover */
@@ -181,61 +173,46 @@
     }
 }
 @media (max-width: 768px) { /* Starts being considered mobile */
+    .navbar{
+        height: 70px;
+    }
+    .navbar-logo {
+        width: 200px; /* Smaller logo */
+        height: 50px; /* Adjust height accordingly */
+        margin-bottom: 5px;
+    }
+
+    .separator {
+        z-index: 3;
+        bottom: 0px;
+    }
     .menu-items {
         display: none;
     }
     .hamburger {
         position: absolute;
         right: 0px; /* Align it to the right */
-        bottom:35%; /* Align it to the top */
+        bottom:37%;
         display: block; /* Show the hamburger icon */
         margin-right: 1%;
-        width: 20px;
+        width: 24px;
     }
-}
-
-@media (max-width: 650px) {
-    .navbar-logo {
-        width: 170px; /* Smaller logo */
-        height: 40px; /* Adjust height accordingly */
-        margin-bottom: 5px;
-    }
-
-    .hamburger {
-        width: 20px; /* Smaller hamburger icon */
-    }
-    .hamburger:hover {
-        filter: brightness(0) invert(1); /* This will turn the icon white */
-    }
-
-    .content {
-        justify-content: space-between; /* Ensure items are spaced out */
-    }
-
-    .exit-img{
-        margin-left: 90%;
-        margin-right: 15px;
-        height: 16px;
-        width: 16px;
-    }
-
-    .navbar{
-        width: 80%;
-        margin: 0 auto;
-        margin-bottom:-1px;
-    }
-
 }
 
 @media (max-width: 400px) {
     .navbar-logo {
-        width: 150px; /* Smaller logo */
-        height: 35px; /* Adjust height accordingly */
-        margin-bottom: 5px;
+        width: 180px; /* Smaller logo */
+        height: 45px; /* Adjust height accordingly */
+        margin-bottom: 2px;
     }
 
     .hamburger {
-        width: 17px; /* Smaller hamburger icon */
+        position: absolute;
+        right: 0px; /* Align it to the right */
+        bottom:37%; /* Align it to the top */
+        display: block; /* Show the hamburger icon */
+        margin-right: 1%;
+        width: 24px;
     }
 
     .content {

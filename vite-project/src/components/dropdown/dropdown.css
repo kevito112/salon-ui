@@ -42,7 +42,7 @@
 }
 .initial-dropdown{
     display: flex;
-    background-color: #DFCBC4;
+    background-color: #f9d2d7;
     align-items: center;
     border-radius: 8px; /* Add this line to round the corners */
     cursor: pointer;
@@ -93,7 +93,7 @@
 }
 /* Dropdown card codes */
 .card {
-    background: #DFCBC4;
+    background: #f9d2d7;
     border-radius: 8px;
     padding: 15px;
     width: calc(33.33% - 8px); /* 50% of the parent container minus the gap */

@@ -59,6 +59,9 @@ const Navbar = () => {
                                 <div className="dropdown-item-wrapper" onClick={() => handleWrapperClick('https://www.fresha.com')} style={{ cursor: 'pointer' }}>
                                     <span className="dropdown-item">Book Now</span>
                                 </div>
+                                <div className="dropdown-item-wrapper" onClick={() => handleWrapperClick('/home')} style={{ cursor: 'pointer' }}>
+                                    <span className="dropdown-item">Home</span>
+                                </div>
                                 <div className="dropdown-item-wrapper" onClick={() => handleWrapperClick('/services')} style={{ cursor: 'pointer' }}>
                                     <span className="dropdown-item">Services</span>
                                 </div>

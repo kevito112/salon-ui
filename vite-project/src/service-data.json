@@ -30,7 +30,7 @@
     ]
   },
   "eyebrow services": {
-    "imgSrc": "assets/images/browshero.png",
+    "imgSrc": "assets/images/eyebrowtweezerhero.png",
     "cards": [
       {
         "title": "eyebrows lamination & tinting",
@@ -183,8 +183,8 @@
     "imgSrc": "assets/images/bodyhero2.png",
     "cards": [
       {
-        "title": "masaje reductor & linfaticos package",
-        "description": "The Masaje Reductor & Linfaticos package combines slimming and lymphatic massages to reduce body fat and improve circulation. It helps eliminate toxins, reduces swelling, improves skin texture, and contours the body. Available in 5 sessions for $400 or 10 sessions for $700, providing optimal, long-lasting results.",
+        "title": "slimming & lymphatic massage package",
+        "description": "The Slimming & Lymphatic Massage package package combines slimming and lymphatic massages to improve circulation. It helps eliminate toxins, reduces swelling, and contours the body. Available in 5 sessions for $400 or 10 sessions for $700, providing optimal, long-lasting results.",
         "hourPrice": "$85"
       }
     ]

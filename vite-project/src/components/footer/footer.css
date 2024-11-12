@@ -85,8 +85,8 @@
     position:absolute;
     background-color: black; /* Set the background color to green */
     padding: 20px; /* Add some padding */
-    bottom: -24px; /* Align it to the bottom */
-    height: 2px;
+    bottom: -28px; /* Align it to the bottom */
+    height: 4px;
     width: 100%; /* Make it span the full width of the viewport */
     display: flex; /* Use Flexbox */
     justify-content: center; /* Center horizontally */

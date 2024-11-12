@@ -62,7 +62,7 @@ const Footer = () => {
                     </div>
             </div>
             <div className="mini-footer">
-                <p>Copyrights {new Date().getFullYear()} All Rights Reserved.</p>
+                <p>Copyright {new Date().getFullYear()}. All Rights Reserved.</p>
             </div>
         </footer>
     );

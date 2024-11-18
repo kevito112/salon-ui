@@ -31,7 +31,7 @@ const Home = () => {
                     <div className="about-text-container">
                         <h2 className="about-title">get to know me</h2>
                         <h3 className="about-subheader">Your Expert In Personalized Skincare</h3>
-                        <p>I’m Yeny, a certified esthetician with a passion for helping people feel their absolute best. As the proud owner and primary provider at KeyBeauty, I specialize in skincare, lash extensions, and waxing, offering personalized beauty treatments tailored to your individual needs. I’m committed to using top-quality products and staying fully up to date with the latest beauty techniques, ensuring you get the best results possible. My goal is to create a welcoming, relaxing environment where you can unwind and leave feeling confident, refreshed, and beautiful. At KeyBeauty, I focus on making every beauty experience truly exceptional. </p>
+                        <p>I’m Yeny, a certified esthetician with a passion for helping people feel their absolute best. As the proud owner and primary provider at Key Beauty, I specialize in skincare, lash extensions, and waxing, offering personalized beauty treatments tailored to your individual needs. I’m committed to using top-quality products and staying fully up to date with the latest beauty techniques, ensuring you get the best results possible. My goal is to create a welcoming, relaxing environment where you can unwind and leave feeling confident, refreshed, and beautiful. At Key Beauty, I focus on making every beauty experience truly exceptional. </p>
                     </div>
                     <img src={ownerImg} className="owner-img" alt="Owner" />
                 </section>

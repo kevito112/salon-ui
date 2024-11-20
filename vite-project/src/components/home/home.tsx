@@ -4,7 +4,7 @@ import Footer from "../footer/footer.tsx";
 import Button from '../../components/button/button';
 import ownerImg from '../../assets/images/process.png';
 import topleft from '../../assets/images/topleft-collage.png';
-import topright from '../../assets/images/topright-collage.png';
+import topright from '../../assets/images/topright-resized2.png';
 import bottomleft from '../../assets/images/bottomleft-collage.png';
 import bottomright from '../../assets/images/bottomright-collage.png';
 import aestheticsImg from '../../assets/images/aesthetics.png';

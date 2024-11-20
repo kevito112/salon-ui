@@ -131,6 +131,7 @@
     flex: 1 1 calc(50% - 5px); /* Each image takes up 50% of the row minus the gap */
     max-width: calc(50% - 5px); /* Ensure images do not exceed 50% of the row minus the gap */
     height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
 }
 .treatments-text-container{
     background-color:#fbe1e5;

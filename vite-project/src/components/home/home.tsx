@@ -45,10 +45,11 @@ const Home = () => {
                     <div className="treatments-text-container">
                          <h2>popular treatments</h2>
                             <ul>
-                                <li><strong>Eyelash Extensions</strong>: Semi-permanent lashes applied to enhance length, thickness, and curl of eyelashes.</li>
-                                <li><strong>Classic Facial</strong>: A cleansing and hydrating treatment that rejuvenates and nourishes the skin.</li>
-                                <li><strong>Eyebrow Waxing</strong>: Shaping and removing excess eyebrow hair using hot or cold wax.</li>
-                                <li><strong>Lymphatic Drainage Massage</strong>: A gentle massage promoting lymph flow to reduce swelling and improve circulation.</li>
+                                <li><strong>Classic Eyelash Extensions </strong>($85): Semi-permanent lashes applied to enhance length, thickness, and curl of eyelashes.</li>
+                                <li><strong>Classic Facial </strong>($65): A cleansing and hydrating treatment that rejuvenates and nourishes the skin.</li>
+                                <li><strong>Eyebrow Waxing </strong>($15): Shaping and removing excess eyebrow hair using hot or cold wax.</li>
+                                <li><strong>Classic Manicure </strong>($30): Leaves your nails looking beautiful and healthy, includes trimming, shaping, buffing nails, and a soothing hand massage </li>
+                                <li><strong>Lymphatic Drainage Massage </strong>($85): A gentle massage promoting lymph flow to reduce swelling and improve circulation.</li>
                             </ul>
                             <Button
                                 text="View More"

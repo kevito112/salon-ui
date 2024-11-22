@@ -25,6 +25,7 @@
 }
 
 .column{
+    flex: 1; /* Ensure all columns have equal width */
     display:flex;
     flex-direction: column;
     gap: 20px;

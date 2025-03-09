@@ -56,7 +56,7 @@ const Navbar = () => {
                                 <div className="dropdown-item-wrapper exitting-row" onClick={closeDropdown} style={{ cursor: 'pointer' }}>
                                     <img src={exit} className="exit-img" alt="Exit" />
                                 </div>
-                                <div className="dropdown-item-wrapper" onClick={() => handleWrapperClick('https://www.fresha.com')} style={{ cursor: 'pointer' }}>
+                                <div className="dropdown-item-wrapper" onClick={() => handleWrapperClick('https://booksy.com/en-us/1369477_key-beauty-key-biscayne_brows-lashes_15888_key-biscayne?do=invite&utm_medium=social_post_creator')} style={{ cursor: 'pointer' }}>
                                     <span className="dropdown-item">Book Now</span>
                                 </div>
                                 <div className="dropdown-item-wrapper" onClick={() => handleWrapperClick('/home')} style={{ cursor: 'pointer' }}>

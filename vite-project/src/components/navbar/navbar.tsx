@@ -25,13 +25,14 @@ const Navbar = () => {
         <div className="full-width-container">
             <nav className="navbar container">
                 <div className="content">
-                    <img
-                        src={keybeauty}
-                        alt="Key Beauty Logo"
-                        className="navbar-logo"
-                        onClick={() => window.location.href = '/home'}
-                        style={{ cursor: 'pointer' }}
-                    />
+                    <a href="/home">
+                        <img
+                            src={keybeauty}
+                            alt="Key Beauty Logo"
+                            className="navbar-logo"
+                            style={{ cursor: 'pointer' }}
+                        />
+                    </a>
                     <div className="menu-items">
                         <a href="/home" className="menu-item">HOME</a>
                         <a href="/services" className="menu-item">SERVICES</a>
@@ -56,18 +57,18 @@ const Navbar = () => {
                                 <div className="dropdown-item-wrapper exitting-row" onClick={closeDropdown} style={{ cursor: 'pointer' }}>
                                     <img src={exit} className="exit-img" alt="Exit" />
                                 </div>
-                                <div className="dropdown-item-wrapper" onClick={() => handleWrapperClick('https://booksy.com/en-us/1369477_key-beauty-key-biscayne_brows-lashes_15888_key-biscayne?do=invite&utm_medium=social_post_creator')} style={{ cursor: 'pointer' }}>
+                                <a href="https://booksy.com/en-us/1369477_key-beauty-key-biscayne_brows-lashes_15888_key-biscayne?do=invite&utm_medium=social_post_creator" className="dropdown-item-wrapper" style={{ cursor: 'pointer' }}>
                                     <span className="dropdown-item">Book Now</span>
-                                </div>
-                                <div className="dropdown-item-wrapper" onClick={() => handleWrapperClick('/home')} style={{ cursor: 'pointer' }}>
+                                </a>
+                                <a href="/home" className="dropdown-item-wrapper" style={{ cursor: 'pointer' }}>
                                     <span className="dropdown-item">Home</span>
-                                </div>
-                                <div className="dropdown-item-wrapper" onClick={() => handleWrapperClick('/services')} style={{ cursor: 'pointer' }}>
+                                </a>
+                                <a href="/services" className="dropdown-item-wrapper" style={{ cursor: 'pointer' }}>
                                     <span className="dropdown-item">Services</span>
-                                </div>
-                                <div className="dropdown-item-wrapper" onClick={() => handleWrapperClick('/gallery')} style={{ cursor: 'pointer' }}>
+                                </a>
+                                <a href="/gallery" className="dropdown-item-wrapper" style={{ cursor: 'pointer' }}>
                                     <span className="dropdown-item">Gallery</span>
-                                </div>
+                                </a>
                             </div>
                         )}
                     </div>

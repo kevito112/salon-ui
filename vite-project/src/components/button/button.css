@@ -11,6 +11,9 @@
     cursor: pointer;
     color: black; /* Ensure text color is black */
     text-decoration: none;
+    display: inline-flex; /* Ensure the element behaves like a button */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
     transition: background-color 0.3s;
 }
 

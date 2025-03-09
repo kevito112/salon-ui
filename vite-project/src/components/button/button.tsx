@@ -15,9 +15,9 @@ const Button: React.FC<ButtonProps> = ({ text, style, className, url = 'https://
     };
 
     return (
-        <button className={`custom-button ${className}`} style={style} onClick={handleClick}>
+        <a href={url} className={`custom-button ${className}`} style={style}>
             {text}
-        </button>
+        </a>
     );
 };
 

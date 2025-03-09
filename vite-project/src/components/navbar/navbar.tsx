@@ -17,10 +17,6 @@ const Navbar = () => {
         setIsDropdownOpen(false);
     };
 
-    const handleWrapperClick = (href: string) => {
-        window.location.href = href;
-    };
-
     return (
         <div className="full-width-container">
             <nav className="navbar container">

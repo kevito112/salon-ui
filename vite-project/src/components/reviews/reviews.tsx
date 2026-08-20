@@ -2,23 +2,60 @@ import { useCallback, useEffect, useState } from 'react';
 import './reviews.css';
 import {
     fallbackReviews,
-    GOOGLE_RATING,
-    GOOGLE_REVIEW_COUNT,
     GOOGLE_REVIEWS_URL,
     MIN_REVIEW_RATING,
+    MAX_DISPLAY_REVIEWS,
     type Review,
 } from '../../data/reviews';
 
-const ROTATE_MS = 7000;
+const ROTATE_MS = 10000;
 
-const StarIcon = () => (
-    <svg viewBox="0 0 24 24" aria-hidden="true" className="review-star">
-        <path
-            fill="currentColor"
-            d="M12 2.6l2.53 6.12 6.62.58-5.05 4.4 1.5 6.46L12 16.9l-5.6 3.26 1.5-6.46-5.05-4.4 6.62-.58L12 2.6z"
-        />
+const STAR_PATH =
+    'M12 2.6l2.53 6.12 6.62.58-5.05 4.4 1.5 6.46L12 16.9l-5.6 3.26 1.5-6.46-5.05-4.4 6.62-.58L12 2.6z';
+
+const StarIcon = ({ className = 'review-star' }: { className?: string }) => (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className={className}>
+        <path fill="currentColor" d={STAR_PATH} />
     </svg>
 );
+
+const StarRating = ({
+    rating,
+    className = 'reviews-stars',
+    label,
+}: {
+    rating: number;
+    className?: string;
+    label?: string;
+}) => {
+    const safeRating = Math.min(Math.max(rating, 0), 5);
+
+    return (
+        <span
+            className={className}
+            aria-label={label ?? `${safeRating} out of 5 stars`}
+        >
+            {Array.from({ length: 5 }, (_, index) => {
+                const fillAmount = Math.min(Math.max(safeRating - index, 0), 1);
+
+                return (
+                    <span key={index} className="review-star-slot">
+                        <StarIcon className="review-star review-star-empty" />
+                        <span
+                            className="review-star-fill"
+                            style={{ width: `${fillAmount * 100}%` }}
+                        >
+                            <StarIcon className="review-star" />
+                        </span>
+                    </span>
+                );
+            })}
+        </span>
+    );
+};
+
+const formatRating = (rating: number) =>
+    Number.isInteger(rating) ? `${rating}` : rating.toFixed(1);
 
 const GoogleMark = () => (
     <svg viewBox="0 0 24 24" aria-hidden="true" className="google-mark">
@@ -31,9 +68,9 @@ const GoogleMark = () => (
 
 const Reviews = () => {
     const [reviews, setReviews] = useState<Review[]>(fallbackReviews);
-    const [googleRating, setGoogleRating] = useState(GOOGLE_RATING);
-    const [googleCount, setGoogleCount] = useState(GOOGLE_REVIEW_COUNT);
-    const [isLive, setIsLive] = useState(false);
+    const [googleRating, setGoogleRating] = useState<number | null>(null);
+    const [googleCount, setGoogleCount] = useState<number | null>(null);
+    const [hasLiveGoogleData, setHasLiveGoogleData] = useState(false);
     const [index, setIndex] = useState(0);
     const [paused, setPaused] = useState(false);
 
@@ -46,19 +83,23 @@ const Reviews = () => {
                 return response.json();
             })
             .then((data) => {
-                if (cancelled || !data?.reviews?.length) return;
+                if (cancelled || !data) return;
 
-                const filtered = data.reviews.filter(
+                if (typeof data.rating === 'number') setGoogleRating(data.rating);
+                if (typeof data.count === 'number') setGoogleCount(data.count);
+
+                if (data.source === 'google-places-api') {
+                    setHasLiveGoogleData(true);
+                }
+
+                const filtered = (data.reviews ?? []).filter(
                     (review: Review) => review.rating >= MIN_REVIEW_RATING && review.text,
                 );
 
-                if (!filtered.length) return;
-
-                setReviews(filtered);
-                setIndex(0);
-                setIsLive(true);
-                if (typeof data.rating === 'number') setGoogleRating(data.rating);
-                if (typeof data.count === 'number') setGoogleCount(data.count);
+                if (filtered.length) {
+                    setReviews(filtered.slice(0, MAX_DISPLAY_REVIEWS));
+                    setIndex(0);
+                }
             })
             .catch(() => {
                 /* Keep fallback reviews if the API is unavailable locally. */
@@ -87,25 +128,28 @@ const Reviews = () => {
     const current = reviews[index] ?? reviews[0];
     if (!current) return null;
 
-    const filledStars = Math.round(current.rating);
-
     return (
         <section className="reviews container section" aria-labelledby="reviews-heading">
             <h2 id="reviews-heading">client reviews</h2>
             <p className="reviews-subtitle">
-                {isLive
-                    ? 'Live Google reviews from guests who rated Key Beauty 4.5 stars or higher.'
-                    : 'Guest reviews shown while live Google reviews load.'}
+                Hear what our community has to say about Key Beauty.
             </p>
             <div className="reviews-rating">
-                <span className="reviews-stars" aria-hidden="true">
-                    {Array.from({ length: 5 }, (_, starIndex) => (
-                        <StarIcon key={starIndex} />
-                    ))}
-                </span>
-                <span className="reviews-rating-copy">
-                    Rated {googleRating} on Google · {googleCount} reviews
-                </span>
+                {hasLiveGoogleData && googleRating !== null && googleCount !== null ? (
+                    <>
+                        <StarRating
+                            rating={googleRating}
+                            label={`Rated ${formatRating(googleRating)} out of 5 on Google`}
+                        />
+                        <span className="reviews-rating-copy">
+                            Rated {formatRating(googleRating)} on Google · {googleCount} reviews
+                        </span>
+                    </>
+                ) : (
+                    <span className="reviews-rating-copy reviews-rating-loading">
+                        Loading Google rating…
+                    </span>
+                )}
             </div>
             <div
                 className="reviews-carousel"
@@ -123,24 +167,21 @@ const Reviews = () => {
                     </button>
                 )}
                 <article key={current.id} className="review-card" aria-live="polite" aria-atomic="true">
-                    <div
+                    <StarRating
+                        rating={current.rating}
                         className="reviews-stars review-card-stars"
-                        aria-label={`${current.rating} out of 5 stars`}
-                    >
-                        {Array.from({ length: filledStars }, (_, starIndex) => (
-                            <StarIcon key={starIndex} />
-                        ))}
-                    </div>
+                        label={`${current.rating} out of 5 stars`}
+                    />
                     <p className="reviews-quote">“{current.text}”</p>
                     <div className="reviews-author-row">
-                        {isLive && current.photoUrl && (
+                        {hasLiveGoogleData && current.photoUrl && (
                             <img
                                 src={current.photoUrl}
                                 alt=""
                                 className="reviews-author-photo"
                             />
                         )}
-                        {isLive && current.profileUrl ? (
+                        {hasLiveGoogleData && current.profileUrl ? (
                             <a
                                 href={current.profileUrl}
                                 className="reviews-author reviews-author-link"
@@ -155,9 +196,9 @@ const Reviews = () => {
                     </div>
                     <p className="reviews-source">
                         <GoogleMark />
-                        {isLive ? 'Posted on Google' : 'Guest review'}
+                        {hasLiveGoogleData ? 'Posted on Google' : 'Guest review'}
                     </p>
-                    {isLive && (
+                    {hasLiveGoogleData && (
                         <p className="reviews-google-attribution">
                             Content from{' '}
                             <a

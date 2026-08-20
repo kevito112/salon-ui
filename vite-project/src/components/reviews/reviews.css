@@ -46,10 +46,30 @@
     color: #8c6c24;
 }
 
+.review-star-slot {
+    position: relative;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.review-star-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
 .review-star {
     width: 18px;
     height: 18px;
     display: block;
+}
+
+.review-star-empty {
+    color: rgba(140, 108, 36, 0.28);
 }
 
 .reviews-rating-copy {
@@ -58,6 +78,11 @@
     font-weight: 400;
     letter-spacing: 0.02em;
     color: #000000;
+}
+
+.reviews-rating-loading {
+    font-style: italic;
+    color: #7D736F;
 }
 
 .reviews-carousel {

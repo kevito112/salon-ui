@@ -95,8 +95,11 @@ const Reviews = () => {
                     setHasLiveGoogleData(true);
                 }
 
-                const filtered = (data.reviews ?? []).filter(
-                    (review: Review) => review.rating >= MIN_REVIEW_RATING && review.text,
+                const incomingReviews: Review[] = Array.isArray(data.reviews)
+                    ? data.reviews
+                    : [];
+                const filtered = incomingReviews.filter(
+                    (review) => review.rating >= MIN_REVIEW_RATING && review.text,
                 );
 
                 if (filtered.length) {

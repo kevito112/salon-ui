@@ -40,13 +40,18 @@ const Navbar = () => {
                     </div>
                     <div className="dropdown">
                         {!isDropdownOpen && (
-                        <img
-                            src={hamburgerIcon}
-                            alt="Hamburger Menu"
-                            className="hamburger"
+                        <button
+                            type="button"
+                            className="hamburger-button"
                             onClick={toggleDropdown}
-                            style={{ cursor: 'pointer' }}
-                        />
+                            aria-label="Open menu"
+                        >
+                            <img
+                                src={hamburgerIcon}
+                                alt=""
+                                className="hamburger"
+                            />
+                        </button>
                      )}
                         {isDropdownOpen && (
                             <div className="dropdown-content">

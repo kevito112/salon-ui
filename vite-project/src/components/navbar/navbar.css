@@ -50,8 +50,17 @@
     margin-bottom: 5px;
     margin-right: 200px;
 }
-.hamburger {
+.hamburger-button {
     display: none; /* Hide by default */
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.hamburger {
+    display: block;
+    pointer-events: none; /* Clicks go to the larger button hit area */
 }
 
 .menu-items{
@@ -74,6 +83,9 @@
     line-height: 29.06px;
     color: black;
     text-decoration: none;
+    /* Larger selectable area without changing visual layout */
+    padding: 12px 14px;
+    margin: -12px -14px;
 }
 
 .book-now-button-navbar {
@@ -195,13 +207,21 @@
     .menu-items {
         display: none;
     }
-    .hamburger {
+    .hamburger-button {
         position: absolute;
         right: 0px; /* Align it to the right */
-        bottom:37%;
-        display: block; /* Show the hamburger icon */
-        margin-right: 1%;
+        bottom: 37%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* Larger tap target around the icon; visual size stays the same */
+        padding: 14px;
+        margin: -14px;
+        margin-right: calc(1% - 14px);
+    }
+    .hamburger {
         width: 24px;
+        height: auto;
     }
     .full-width-container::before {
         bottom: 1px;
@@ -215,13 +235,20 @@
         margin-bottom: 2px;
     }
 
-    .hamburger {
+    .hamburger-button {
         position: absolute;
         right: 0px; /* Align it to the right */
-        bottom:37%; /* Align it to the top */
-        display: block; /* Show the hamburger icon */
-        margin-right: 1%;
+        bottom: 37%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px;
+        margin: -14px;
+        margin-right: calc(1% - 14px);
+    }
+    .hamburger {
         width: 24px;
+        height: auto;
     }
 
     .content {
@@ -244,6 +271,7 @@
 
     .hamburger {
         width: 15px; /* Smaller hamburger icon */
+        height: auto;
     }
 
     .content {

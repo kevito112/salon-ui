@@ -1,5 +1,5 @@
 const SEARCH_QUERY = 'Key Beauty key Biscayne 961 Crandon Blvd';
-const MIN_RATING = 4.5;
+const MIN_RATING = 4;
 const MAX_REVIEWS = 7;
 
 function normalizePlaceId(id) {
@@ -154,6 +154,7 @@ export default async function handler(req, res) {
 
         const reviews = mergeReviews(newReviews, legacyNewestReviews, legacyRelevantReviews)
             .filter((review) => review.rating >= MIN_RATING && review.text)
+            .sort((a, b) => b.rating - a.rating)
             .slice(0, MAX_REVIEWS);
 
         res.setHeader('Cache-Control', 's-maxage=1800, stale-while-revalidate=3600');

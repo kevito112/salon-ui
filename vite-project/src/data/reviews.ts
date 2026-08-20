@@ -10,7 +10,7 @@ export type Review = {
 export const GOOGLE_REVIEWS_URL =
     'https://www.google.com/maps/search/?api=1&query=Key+Beauty+key+Biscayne%2C+961+Crandon+Blvd%2C+Key+Biscayne%2C+FL+33149';
 
-export const MIN_REVIEW_RATING = 4.5;
+export const MIN_REVIEW_RATING = 4;
 export const MAX_DISPLAY_REVIEWS = 7;
 
 /** Fallback reviews if the Google Places API is unavailable. */

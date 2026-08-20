@@ -58,15 +58,6 @@ const StarRating = ({
 const formatRating = (rating: number) =>
     Number.isInteger(rating) ? `${rating}` : rating.toFixed(1);
 
-const GoogleMark = () => (
-    <svg viewBox="0 0 24 24" aria-hidden="true" className="google-mark">
-        <path fill="#4285F4" d="M23.5 12.27c0-.84-.07-1.65-.21-2.43H12v4.6h6.46a5.52 5.52 0 0 1-2.4 3.63v3h3.88c2.27-2.09 3.56-5.17 3.56-8.8z" />
-        <path fill="#34A853" d="M12 24c3.24 0 5.96-1.08 7.95-2.93l-3.88-3c-1.08.72-2.47 1.15-4.07 1.15-3.13 0-5.78-2.11-6.73-4.96H1.27v3.09A12 12 0 0 0 12 24z" />
-        <path fill="#FBBC05" d="M5.27 14.26A7.21 7.21 0 0 1 4.9 12c0-.79.14-1.55.37-2.26V6.65H1.27A12 12 0 0 0 0 12c0 1.94.46 3.77 1.27 5.35l4-3.09z" />
-        <path fill="#EA4335" d="M12 4.75c1.76 0 3.35.6 4.6 1.79l3.44-3.44C17.95 1.14 15.23 0 12 0 7.31 0 3.26 2.69 1.27 6.65l4 3.09C6.22 6.86 8.87 4.75 12 4.75z" />
-    </svg>
-);
-
 const Reviews = () => {
     const [reviews, setReviews] = useState<Review[]>(() => shuffleReviews(fallbackReviews));
     const [googleRating, setGoogleRating] = useState<number | null>(null);
@@ -201,22 +192,6 @@ const Reviews = () => {
                             <p className="reviews-author">{current.name}</p>
                         )}
                     </div>
-                    <p className="reviews-source">
-                        <GoogleMark />
-                        {hasLiveGoogleData ? 'Posted on Google' : 'Guest review'}
-                    </p>
-                    {hasLiveGoogleData && (
-                        <p className="reviews-google-attribution">
-                            Content from{' '}
-                            <a
-                                href={GOOGLE_REVIEWS_URL}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Google Maps
-                            </a>
-                        </p>
-                    )}
                 </article>
                 {reviews.length > 1 && (
                     <button
@@ -244,14 +219,16 @@ const Reviews = () => {
                     ))}
                 </div>
             )}
-            <a
-                className="reviews-google-link"
-                href={GOOGLE_REVIEWS_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Read reviews on Google
-            </a>
+            {hasLiveGoogleData && (
+                <a
+                    className="reviews-google-link"
+                    href={GOOGLE_REVIEWS_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Read reviews on Google Maps
+                </a>
+            )}
         </section>
     );
 };

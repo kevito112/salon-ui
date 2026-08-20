@@ -10,6 +10,7 @@ import bottomright from '../../assets/images/bottomright-collage.png';
 import aestheticsImg from '../../assets/images/aesthetics.png';
 import relaxationImg from '../../assets/images/relaxation.png';
 import individualityImg from '../../assets/images/individuality.png';
+import Reviews from '../reviews/reviews.tsx';
 
 const Home = () => {
     return (
@@ -58,6 +59,7 @@ const Home = () => {
                             />
                     </div>
                 </section>
+                <Reviews />
                 <section className="benefits container section">
                     <h2>reap the benefits</h2>
                     <p>Experience lasting benefits that enhance, refresh, and reveal

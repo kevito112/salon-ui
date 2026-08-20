@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState, type TouchEvent } from 'react';
 import './reviews.css';
 import {
     fallbackReviews,
@@ -10,6 +10,7 @@ import {
 } from '../../data/reviews';
 
 const ROTATE_MS = 10000;
+const SWIPE_THRESHOLD_PX = 40;
 
 const STAR_PATH =
     'M12 2.6l2.53 6.12 6.62.58-5.05 4.4 1.5 6.46L12 16.9l-5.6 3.26 1.5-6.46-5.05-4.4 6.62-.58L12 2.6z';
@@ -67,6 +68,7 @@ const Reviews = () => {
         () => Math.floor(Math.random() * fallbackReviews.length),
     );
     const [paused, setPaused] = useState(false);
+    const swipeStart = useRef<{ x: number; y: number } | null>(null);
 
     useEffect(() => {
         let cancelled = false;
@@ -112,6 +114,33 @@ const Reviews = () => {
         setIndex((nextIndex + reviews.length) % reviews.length);
     }, [reviews.length]);
 
+    const onSwipeStart = useCallback((event: TouchEvent) => {
+        const touch = event.changedTouches[0];
+        if (!touch) return;
+        swipeStart.current = { x: touch.clientX, y: touch.clientY };
+        setPaused(true);
+    }, []);
+
+    const onSwipeEnd = useCallback((event: TouchEvent) => {
+        const start = swipeStart.current;
+        swipeStart.current = null;
+        setPaused(false);
+        if (!start || reviews.length < 2) return;
+
+        const touch = event.changedTouches[0];
+        if (!touch) return;
+
+        const dx = touch.clientX - start.x;
+        const dy = touch.clientY - start.y;
+        if (Math.abs(dx) < SWIPE_THRESHOLD_PX || Math.abs(dx) < Math.abs(dy)) return;
+
+        setIndex((current) => (
+            dx < 0
+                ? (current + 1) % reviews.length
+                : (current - 1 + reviews.length) % reviews.length
+        ));
+    }, [reviews.length]);
+
     useEffect(() => {
         if (paused || reviews.length < 2) return undefined;
         if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined;
@@ -153,6 +182,12 @@ const Reviews = () => {
                 className="reviews-carousel"
                 onMouseEnter={() => setPaused(true)}
                 onMouseLeave={() => setPaused(false)}
+                onTouchStart={onSwipeStart}
+                onTouchEnd={onSwipeEnd}
+                onTouchCancel={() => {
+                    swipeStart.current = null;
+                    setPaused(false);
+                }}
             >
                 {reviews.length > 1 && (
                     <button

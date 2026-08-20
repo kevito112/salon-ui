@@ -92,6 +92,7 @@
     gap: 24px;
     max-width: 860px;
     margin: 0 auto;
+    touch-action: pan-y;
 }
 
 .review-card {

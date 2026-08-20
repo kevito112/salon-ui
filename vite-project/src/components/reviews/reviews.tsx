@@ -179,18 +179,7 @@ const Reviews = () => {
                                 className="reviews-author-photo"
                             />
                         )}
-                        {hasLiveGoogleData && current.profileUrl ? (
-                            <a
-                                href={current.profileUrl}
-                                className="reviews-author reviews-author-link"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                {current.name}
-                            </a>
-                        ) : (
-                            <p className="reviews-author">{current.name}</p>
-                        )}
+                        <p className="reviews-author">{current.name}</p>
                     </div>
                 </article>
                 {reviews.length > 1 && (

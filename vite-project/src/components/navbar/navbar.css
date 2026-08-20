@@ -71,12 +71,7 @@
     gap: 20vh;
 }
 
-.menu-items a:hover {
-    color: #8c6c24; /* Change text color on hover */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
-}
-
-.menu-items a {
+.menu-item {
     font-family: 'Cormorant Garamond', serif;
     font-size: 20px;
     font-weight: 300;
@@ -88,11 +83,18 @@
     margin: -12px -14px;
 }
 
+.menu-item:hover {
+    color: #8c6c24; /* Change text color on hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
 .book-now-button-navbar {
     font-weight: 700 !important;
     font-size: 22px !important;
     width: 130px !important;
     height: 40px !important;
+    padding: 0 !important;
+    margin: 0;
 }
 
 .dropdown-content .exitting-row {

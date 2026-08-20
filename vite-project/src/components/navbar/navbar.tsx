@@ -1,5 +1,5 @@
 import './navbar.css';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import keybeauty from '../../assets/images/keybeauty.png';
 import hamburgerIcon from '../../assets/images/hamburger.png'; // Import the hamburger icon
 import exit from '../../assets/images/exit.png';
@@ -8,6 +8,7 @@ import Button from '../../components/button/button';
 const Navbar = () => {
 
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const dropdownRef = useRef<HTMLDivElement>(null);
 
     const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
@@ -16,6 +17,19 @@ const Navbar = () => {
     const closeDropdown = () => {
         setIsDropdownOpen(false);
     };
+
+    useEffect(() => {
+        if (!isDropdownOpen) return;
+
+        const handlePointerDown = (event: PointerEvent) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+                setIsDropdownOpen(false);
+            }
+        };
+
+        document.addEventListener('pointerdown', handlePointerDown);
+        return () => document.removeEventListener('pointerdown', handlePointerDown);
+    }, [isDropdownOpen]);
 
     return (
         <div className="full-width-container">
@@ -38,7 +52,7 @@ const Navbar = () => {
                             className="book-now-button-navbar"
                         />
                     </div>
-                    <div className="dropdown">
+                    <div className="dropdown" ref={dropdownRef}>
                         {!isDropdownOpen && (
                         <button
                             type="button"

@@ -5,6 +5,7 @@ import {
     GOOGLE_REVIEWS_URL,
     MIN_REVIEW_RATING,
     MAX_DISPLAY_REVIEWS,
+    shuffleReviews,
     type Review,
 } from '../../data/reviews';
 
@@ -67,11 +68,13 @@ const GoogleMark = () => (
 );
 
 const Reviews = () => {
-    const [reviews, setReviews] = useState<Review[]>(fallbackReviews);
+    const [reviews, setReviews] = useState<Review[]>(() => shuffleReviews(fallbackReviews));
     const [googleRating, setGoogleRating] = useState<number | null>(null);
     const [googleCount, setGoogleCount] = useState<number | null>(null);
     const [hasLiveGoogleData, setHasLiveGoogleData] = useState(false);
-    const [index, setIndex] = useState(0);
+    const [index, setIndex] = useState(
+        () => Math.floor(Math.random() * fallbackReviews.length),
+    );
     const [paused, setPaused] = useState(false);
 
     useEffect(() => {
@@ -97,8 +100,9 @@ const Reviews = () => {
                 );
 
                 if (filtered.length) {
-                    setReviews(filtered.slice(0, MAX_DISPLAY_REVIEWS));
-                    setIndex(0);
+                    const shuffled = shuffleReviews(filtered.slice(0, MAX_DISPLAY_REVIEWS));
+                    setReviews(shuffled);
+                    setIndex(Math.floor(Math.random() * shuffled.length));
                 }
             })
             .catch(() => {

@@ -14,6 +14,16 @@ export const MIN_REVIEW_RATING = 4;
 /** Places API (New) returns at most 5 reviews per request. */
 export const MAX_DISPLAY_REVIEWS = 5;
 
+/** Fisher–Yates shuffle; returns a new array in random order. */
+export function shuffleReviews<T>(items: T[]): T[] {
+    const shuffled = [...items];
+    for (let i = shuffled.length - 1; i > 0; i -= 1) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+}
+
 /** Fallback reviews if the Google Places API is unavailable. */
 export const fallbackReviews: Review[] = [
     {

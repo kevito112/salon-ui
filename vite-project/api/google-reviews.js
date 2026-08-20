@@ -89,7 +89,6 @@ export default async function handler(req, res) {
         const reviews = (payload.reviews || [])
             .map(toReview)
             .filter((review) => review.rating >= MIN_RATING && review.text)
-            .sort((a, b) => b.rating - a.rating)
             .slice(0, MAX_REVIEWS);
 
         res.setHeader('Cache-Control', 's-maxage=1800, stale-while-revalidate=3600');

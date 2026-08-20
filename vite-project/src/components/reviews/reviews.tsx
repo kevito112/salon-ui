@@ -88,7 +88,7 @@ const Reviews = () => {
                 if (typeof data.rating === 'number') setGoogleRating(data.rating);
                 if (typeof data.count === 'number') setGoogleCount(data.count);
 
-                if (data.source === 'google-places-api') {
+                if (data.source === 'google-places-api-new' || data.source === 'google-places-api') {
                     setHasLiveGoogleData(true);
                 }
 
